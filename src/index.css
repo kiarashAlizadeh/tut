@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-[#0c0e54];
+}
+
 /* navlink active */
 .active {
   @apply text-base font-bold text-[#1D91CC] lg:text-xl lg:hover:text-[#1f6182] !important;
