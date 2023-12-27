@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#0c0e54];
+  @apply bg-[#1e1f26] text-white;
 }
 
 /* navlink active */
