@@ -40,7 +40,6 @@ function CoursePageCom({
               className="my-10 hidden w-fit select-none rounded-lg bg-teal-500 px-4 py-2 text-center text-xl text-white xl:inline"
               onClick={() => {
                 window.location.href = link
-                // console.log(link);
               }}
             >
               ثبت نام در دوره
@@ -94,7 +93,7 @@ function CoursePageCom({
         <button
           className="my-10 w-fit select-none rounded-lg bg-teal-500 px-4 py-2 text-center text-xl text-white xl:hidden"
           onClick={() => {
-            window.location.href = { link }
+            window.location.href = link
           }}
         >
           ثبت نام در دوره
