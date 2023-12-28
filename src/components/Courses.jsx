@@ -36,11 +36,14 @@ function Courses() {
     },
   ]
   return (
+    <>
+    <p className="mx-auto mt-4 text-black font-bold text-3xl lg:text-4xl ">دوره ها</p>
     <div className="my-10 flex flex-wrap justify-center gap-4 px-5">
       {courses.map((course) => (
         <Course key={course.id} {...course} />
       ))}
     </div>
+    </>
   )
 }
 

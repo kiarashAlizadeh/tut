@@ -21,7 +21,7 @@ function Navbar() {
     <>
       <nav className="select-none">
         <div className=" hidden justify-between px-10 py-8 text-[#606060] lg:flex xl:px-[108px]">
-          <img src={Logo} draggable="false" alt="bilito" className="w-32" />
+          <img src={Logo} draggable="false" alt="TUT" className="w-32" />
           <ul className="mx-4 flex justify-around gap-x-4 text-xl xl:gap-x-8">
             <li>
               <NavLink to="/"> صفحه اصلی </NavLink>
@@ -41,7 +41,7 @@ function Navbar() {
             //   onClick={(e) => setReqLogin(true)}
             className="flex w-fit items-center gap-x-2 rounded-lg bg-[#095373] px-4 py-2 text-white hover:bg-opacity-75"
           >
-            <img draggable="false" src={person} alt="person" />
+            <img draggable="false" src={personBlack} alt="person" />
             ورود/ ثبت نام
           </button>
         </div>
