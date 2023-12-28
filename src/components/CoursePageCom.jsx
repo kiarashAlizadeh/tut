@@ -12,11 +12,11 @@ function CoursePageCom({
 }) {
   return (
     <>
-      <div className="flex flex-col items-center md:mb-10">
-        <img src={image} alt={title} className="md:hidden" draggable="false" />
-        <div className="gap-x-10 md:flex">
+      <div className="flex flex-col items-center xl:mb-10">
+        <img src={image} alt={title} className="xl:hidden" draggable="false" />
+        <div className="gap-x-10 xl:flex">
           <div className="flex flex-col items-center">
-            <div class="mx-auto mt-10 hidden w-fit select-none rounded-xl border-2 border-white px-4 py-4 md:block">
+            <div class="mx-auto mt-10 hidden w-fit select-none rounded-xl border-2 border-white px-4 py-4 xl:block">
               <h3 className="mb-4 text-center text-2xl font-black">
                 جزئیات دوره
               </h3>
@@ -37,9 +37,10 @@ function CoursePageCom({
             </div>
 
             <button
-              className="my-10 hidden w-fit select-none rounded-lg bg-teal-500 px-4 py-2 text-center text-xl text-white md:inline"
+              className="my-10 hidden w-fit select-none rounded-lg bg-teal-500 px-4 py-2 text-center text-xl text-white xl:inline"
               onClick={() => {
-                window.location.href = { link }
+                window.location.href = link
+                // console.log(link);
               }}
             >
               ثبت نام در دوره
@@ -49,7 +50,7 @@ function CoursePageCom({
             <img
               src={image}
               alt={title}
-              className="hidden md:block md:max-h-[450px] md:max-w-[800px] md:rounded-xl"
+              className="hidden xl:block xl:max-h-[450px] xl:max-w-[800px] xl:rounded-xl"
               draggable="false"
             />
             <div className="max-w-[800px]">
@@ -62,7 +63,7 @@ function CoursePageCom({
                 {desc}
               </p>
             </div>
-            <div class="mx-auto mt-10 w-fit select-none rounded-xl border-2 border-white px-4 py-4 md:hidden">
+            <div class="mx-auto mt-10 w-fit select-none rounded-xl border-2 border-white px-4 py-4 xl:hidden">
               <h3 className="mb-4 text-center text-2xl font-black">
                 جزئیات دوره
               </h3>
@@ -91,7 +92,7 @@ function CoursePageCom({
         </div>
 
         <button
-          className="my-10 w-fit select-none rounded-lg bg-teal-500 px-4 py-2 text-center text-xl text-white md:hidden"
+          className="my-10 w-fit select-none rounded-lg bg-teal-500 px-4 py-2 text-center text-xl text-white xl:hidden"
           onClick={() => {
             window.location.href = { link }
           }}

@@ -86,7 +86,7 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
     {
       id: 2,
       image:
-        "https://res.cloudinary.com/practicaldev/image/fetch/s--2XdEnCAM--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://raw.githubusercontent.com/sandeepkumar17/td-dev.to/di-collection-posts/assets/blog-cover/c-sharp.png",
+        "https://media.geeksforgeeks.org/wp-content/uploads/20200422171614/CSharp-Tutorial.png",
       title: "دوره C#",
       desc: `زبان برنامه‌نویسی C# یکی از زبان‌های برنامه‌نویسی شیء‌گرا و تحت مدیریت شرکت مایکروسافت است که برای توسعه نرم‌افزارهای متنوع از جمله برنامه‌های دسکتاپ، وب، و موبایل استفاده می‌شود. C# یک زبان بسیار قدرتمند، انعطاف‌پذیر و با عملکرد بالا است که قابلیت‌هایی چون ایمنی نوع‌ها، ارث‌بری، پلی‌مورفیسم و مدیریت حافظه را فراهم می‌کند. این زبان از زیرساخت‌های مدرنی برخوردار است که توسعه دهندگان را قادر می‌سازد به راحتی و با کارایی بالا برنامه‌های متنوع و پیچیده را طراحی، پیاده‌سازی و مدیریت کنند.`,
       courseDetailsTitle: "سرفصل‌های دوره مقدماتی C#",
@@ -150,7 +150,7 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       prerequisite: "آشنایی به الگوریتم و فلوچارت",
       courseTime: 10,
       teacher: "دکتر علیرضا اسلامی زاد",
-      link: "https://docs.google.com/forms",
+      link: `https://docs.google.com/forms`,
       enabled: true,
     },
     {
