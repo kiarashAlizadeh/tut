@@ -11,7 +11,7 @@ import {
 function Courses() {
   const courses = [
     {
-      index: 1,
+      id: 1,
       title: "آموزش طراحی وبسایت مقدماتی",
       desc: "مدرس : استاد علیرضا اسلامی زاد",
       bgImage: bgMainWeb,
@@ -19,7 +19,7 @@ function Courses() {
       btnColor: "404D85",
     },
     {
-      index: 1,
+      id: 2,
       title: "آموزش #C مقدماتی",
       desc: " مدرس : استاد علیرضا اسلامی زاد",
       bgImage: bgMainCSharp,
@@ -27,7 +27,7 @@ function Courses() {
       btnColor: "6558FF",
     },
     {
-      index: 1,
+      id: 3,
       title: "آموزش Python مقدماتی",
       desc: "مدرس : استاد علیرضا اسلامی زاد",
       bgImage: bgMainPython,
@@ -38,7 +38,7 @@ function Courses() {
   return (
     <div className="my-10 flex flex-wrap justify-center gap-4 px-5">
       {courses.map((course) => (
-        <Course key={course.index} {...course} />
+        <Course key={course.id} {...course} />
       ))}
     </div>
   )

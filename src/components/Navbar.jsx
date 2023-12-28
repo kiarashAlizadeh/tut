@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { useState } from "react"
+import { Link, NavLink } from "react-router-dom"
 import {
   fullLogo,
   person,
@@ -11,12 +11,12 @@ import {
   contactUs,
   aboutUs,
   Logo,
-} from '../assets';
+} from "../assets"
 
 function Navbar() {
-  const [resNavbar, setResNavbar] = useState(false);
+  const [resNavbar, setResNavbar] = useState(false)
 
-  const isLogin = false;
+  const isLogin = false
   return (
     <>
       <nav className="select-none">
@@ -27,7 +27,7 @@ function Navbar() {
               <NavLink to="/"> صفحه اصلی </NavLink>
             </li>
             <li>
-              <NavLink to="/a">دوره ها</NavLink>
+              <NavLink to="/Course">دوره ها</NavLink>
             </li>
             <li>
               <NavLink to="/b">تماس با ما</NavLink>
@@ -56,7 +56,7 @@ function Navbar() {
           <button
           //   onClick={(e) => setReqLogin(true)}
           >
-            <img src={personBlack} alt="person" />
+            <img src={person} alt="person" />
           </button>
           {/* main responsive menu */}
           <div class={` ${resNavbar ? "flex" : "hidden"}  relative z-50`}>
@@ -124,4 +124,4 @@ function Navbar() {
   )
 }
 
-export default Navbar;
+export default Navbar
