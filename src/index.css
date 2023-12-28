@@ -8,11 +8,11 @@ body {
 
 /* navlink active */
 .active {
-  @apply text-base font-bold text-[#1D91CC] lg:text-xl lg:hover:text-[#1f6182] !important;
+  @apply text-base font-bold text-[#1f6182] lg:text-xl lg:hover:text-[#62b1d8] !important;
 }
 
 nav ul li a {
-  @apply lg:hover:text-black;
+  @apply lg:hover:text-[#62b1d8];
 }
 
 /* انیمیشن برای نوبار موبایل */

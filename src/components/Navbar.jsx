@@ -39,7 +39,7 @@ function Navbar() {
 
           <button
             //   onClick={(e) => setReqLogin(true)}
-            className="flex w-fit items-center gap-x-2 rounded-lg bg-[#1D91CC] px-4 py-2 text-white hover:bg-opacity-75"
+            className="flex w-fit items-center gap-x-2 rounded-lg bg-[#095373] px-4 py-2 text-white hover:bg-opacity-75"
           >
             <img draggable="false" src={person} alt="person" />
             ورود/ ثبت نام
@@ -59,7 +59,7 @@ function Navbar() {
             <img src={personBlack} alt="person" />
           </button>
           {/* main responsive menu */}
-          <div class={` ${resNavbar ? 'flex' : 'hidden'}  relative z-50`}>
+          <div class={` ${resNavbar ? "flex" : "hidden"}  relative z-50`}>
             <div
               class=" fixed inset-0 bg-gray-800 opacity-40"
               onClick={() => setResNavbar((prev) => !prev)}
@@ -110,7 +110,7 @@ function Navbar() {
               {!isLogin && (
                 <button
                   //   onClick={(e) => setReqLogin(true)}
-                  className="flex w-full items-center justify-center gap-x-2 rounded-lg bg-[#1D91CC] px-4 py-3 text-white hover:bg-opacity-75"
+                  className="flex w-full items-center justify-center gap-x-2 rounded-lg bg-[#095373] px-4 py-3 text-white hover:bg-opacity-75"
                 >
                   <img draggable="false" src={person} alt="person" />
                   ورود/ ثبت نام
@@ -121,7 +121,7 @@ function Navbar() {
         </div>
       </nav>
     </>
-  );
+  )
 }
 
 export default Navbar;

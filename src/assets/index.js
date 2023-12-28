@@ -15,11 +15,13 @@ import Logo from "./images/Logo.svg"
 import bgCSharp from "./images/courses/bg-cSharp.svg"
 
 // courses
-import bgMainCSharp from "./images/courses/bgMainCSharp.svg"
-import cSharp from "./images/courses/cSharp.png"
+import cSharp from "./images/courses/cSharp.svg"
+// import bgMainCSharp from "./images/courses/bgMainCSharp.svg"
+import bgMainCSharp from "./images/courses/Group6.png"
 import python from "./images/courses/python.svg"
-import bgMainPython from "./images/courses/bgMainPython.svg"
-
+import bgMainPython from "./images/courses/bgMainPython2.svg"
+import webLogos from "./images/courses/webLogos.svg"
+import bgMainWeb from "./images/courses/Group7.png"
 
 export {
   fullLogo,
@@ -38,4 +40,6 @@ export {
   bgMainCSharp,
   bgMainPython,
   python,
+  webLogos,
+  bgMainWeb,
 }

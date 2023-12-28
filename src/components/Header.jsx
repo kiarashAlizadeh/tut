@@ -1,7 +1,7 @@
 function Header() {
   return (
     <>
-      <h1>home page</h1>
+      <h1 className="mx-auto">header section</h1>
     </>
   );
 }
