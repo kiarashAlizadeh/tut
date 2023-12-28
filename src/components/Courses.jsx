@@ -12,7 +12,7 @@ function Courses() {
   const courses = [
     {
       id: 1,
-      title: "آموزش طراحی وبسایت مقدماتی",
+      title: "آموزش طراحی وب مقدماتی",
       desc: "مدرس : استاد علیرضا اسلامی زاد",
       bgImage: bgMainWeb,
       logo: webLogos,

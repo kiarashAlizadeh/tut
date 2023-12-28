@@ -1,7 +1,8 @@
+import {Header1} from "../assets"
 function Header() {
   return (
     <>
-      <h1 className="mx-auto">header section</h1>
+    <img src={Header1} alt="" />
     </>
   );
 }

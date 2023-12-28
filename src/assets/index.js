@@ -13,6 +13,7 @@ import aboutUs from "./icons/navbar/aboutUs.svg"
 import fullLogo from "./images/fullLogo.svg"
 import Logo from "./images/Logo.svg"
 import bgCSharp from "./images/courses/bg-cSharp.svg"
+import Header1 from "./images/Header1.png"
 
 // courses
 import cSharp from "./images/courses/cSharp.svg"
@@ -42,4 +43,5 @@ export {
   python,
   webLogos,
   bgMainWeb,
+  Header1
 }

@@ -12,7 +12,7 @@ function Footer() {
             پرکاربرد در این حوزه دسترسی داشته باشند.
           </div>
         </div>
-        <ul className="flex flex-col items-center gap-y-1 ">
+        <ul className="flex flex-col items-center gap-y-1 text-black ">
           <li className="mb-2 border-b-2 border-white px-1 text-xl font-bold ">
             صفحات
           </li>
@@ -29,7 +29,7 @@ function Footer() {
             <Link to="/">درباره ما</Link>
           </li>
         </ul>
-        <ul className="flex flex-col items-center gap-y-1 ">
+        <ul className="flex flex-col items-center gap-y-1  text-black ">
           <li className="mb-2 border-b-2 border-white px-1 text-xl font-bold">
             دوره ها
           </li>
@@ -43,7 +43,7 @@ function Footer() {
             <Link to="/">دوره C#</Link>
           </li>
         </ul>
-        <ul className="flex flex-col items-center gap-y-1 ">
+        <ul className="flex flex-col items-center gap-y-1  text-black ">
           <li className="mb-2 border-b-2 border-white px-1 text-xl font-bold">
             راه های ارتباطی
           </li>
@@ -57,8 +57,10 @@ function Footer() {
             <Link to="https://t.me/TUT_Learning">Telegram</Link>
           </li>
         </ul>
-        <div className="w-full border-t-2 border-white pt-3 text-center">
+        <div className="w-full border-t-2 border-white pt-3 text-center  text-black">
           <span>&copy; ۱۴۰۲ - کلیه حقوق محفوظ</span>
+          <hr className="mt-2" />
+
         </div>
       </footer>
     </>

@@ -14,8 +14,8 @@ function Course({ id, title, desc, bgImage, logo, btnColor }) {
       >
         <img src={logo} className="z-10" alt={`${logo}`} />
         <div className="flex flex-col items-center gap-y-3">
-          <span className="text-xl font-bold">{title}</span>
-          <span className="text-sm">{desc}</span>
+          <span className="text-xl font-bold text-white">{title}</span>
+          <span className="text-sm  text-white">{desc}</span>
         </div>
         <Link
           className="mx-auto w-fit rounded-xl  px-4 py-2 text-xl font-bold text-white"
