@@ -41,7 +41,7 @@ function Navbar() {
             //   onClick={(e) => setReqLogin(true)}
             className="flex w-fit items-center gap-x-2 rounded-lg bg-[#095373] px-4 py-2 text-white hover:bg-opacity-75"
           >
-            <img draggable="false" src={personBlack} alt="person" />
+            <img draggable="false" src={person} alt="person" />
             ورود/ ثبت نام
           </button>
         </div>
@@ -56,7 +56,7 @@ function Navbar() {
           <button
           //   onClick={(e) => setReqLogin(true)}
           >
-            <img src={person} alt="person" />
+            <img src={personBlack} alt="person" />
           </button>
           {/* main responsive menu */}
           <div class={` ${resNavbar ? "flex" : "hidden"}  relative z-50`}>
