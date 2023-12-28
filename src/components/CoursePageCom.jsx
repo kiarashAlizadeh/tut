@@ -16,7 +16,7 @@ function CoursePageCom({
         <img src={image} alt={title} className="xl:hidden" draggable="false" />
         <div className="gap-x-10 xl:flex">
           <div className="flex flex-col items-center">
-            <div class="mx-auto mt-10 hidden w-fit select-none rounded-xl border-2 border-white px-4 py-4 xl:block">
+            <div class="mx-auto mt-10 hidden w-fit select-none rounded-xl border-2 border-black px-4 py-4 xl:block">
               <h3 className="mb-4 text-center text-2xl font-black">
                 جزئیات دوره
               </h3>
@@ -62,7 +62,7 @@ function CoursePageCom({
                 {desc}
               </p>
             </div>
-            <div class="mx-auto mt-10 w-fit select-none rounded-xl border-2 border-white px-4 py-4 xl:hidden">
+            <div class="mx-auto mt-10 w-fit select-none rounded-xl border-2 border-black px-4 py-4 xl:hidden">
               <h3 className="mb-4 text-center text-2xl font-black">
                 جزئیات دوره
               </h3>
