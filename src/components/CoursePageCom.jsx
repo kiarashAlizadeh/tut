@@ -17,7 +17,7 @@ function CoursePageCom({
         <div className="gap-x-10 xl:flex">
           <div className="flex flex-col items-center">
             <div class="mx-auto mt-10 hidden w-fit select-none rounded-xl border-2 border-black px-4 py-4 xl:block">
-              <h3 className="mb-4 text-center text-2xl font-black">
+              <h3 className="font-IRANKharazmi mb-4 text-center text-2xl font-black">
                 جزئیات دوره
               </h3>
               <div className="flex flex-col gap-y-2">
@@ -53,7 +53,9 @@ function CoursePageCom({
               draggable="false"
             />
             <div className="max-w-[800px]">
-              <h1 className="mb-3 text-2xl font-black">{title}</h1>
+              <h1 className="font-IRANKharazmi mb-3 text-2xl font-black">
+                {title}
+              </h1>
               <p
                 className="text-justify"
                 dir="rtl"
@@ -63,7 +65,7 @@ function CoursePageCom({
               </p>
             </div>
             <div class="mx-auto mt-10 w-fit select-none rounded-xl border-2 border-black px-4 py-4 xl:hidden">
-              <h3 className="mb-4 text-center text-2xl font-black">
+              <h3 className="font-IRANKharazmi mb-4 text-center text-2xl font-black">
                 جزئیات دوره
               </h3>
               <div className="flex flex-col gap-y-2">
@@ -82,7 +84,7 @@ function CoursePageCom({
               </div>
             </div>
             <div className="mt-10 flex w-full flex-col">
-              <h2 class="mb-8 text-center text-3xl font-bold">
+              <h2 class="font-IRANKharazmi mb-8 text-center text-3xl font-bold">
                 {courseDetailsTitle}
               </h2>
               <div dangerouslySetInnerHTML={{ __html: courseDetails }}></div>

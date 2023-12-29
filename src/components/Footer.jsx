@@ -19,7 +19,7 @@ function Footer() {
         </div>
         <div className="flex w-full flex-row flex-wrap items-start justify-center gap-8 sm:justify-between lg:w-auto">
           <ul className="flex flex-col items-center gap-y-1 text-black ">
-            <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 text-xl font-bold">
+            <li className="font-IRANKharazmi mb-1 border-b-2 border-black/80 px-1 pb-1 text-xl font-bold">
               صفحات
             </li>
             <li className=" hover:font-bold hover:text-blue-800">
@@ -36,7 +36,7 @@ function Footer() {
             </li>
           </ul>
           <ul className="flex flex-col items-center gap-y-1  text-black ">
-            <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 text-xl font-bold">
+            <li className="font-IRANKharazmi mb-1 border-b-2 border-black/80 px-1 pb-1 text-xl font-bold">
               دوره ها
             </li>
             <li className=" hover:font-bold hover:text-blue-800">
@@ -50,7 +50,7 @@ function Footer() {
             </li>
           </ul>
           <ul className="flex flex-col items-center gap-y-1  text-black">
-            <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 text-xl font-bold">
+            <li className="font-IRANKharazmi mb-1 border-b-2 border-black/80 px-1 pb-1 text-xl font-bold">
               راه های ارتباطی
             </li>
             <li className=" hover:font-bold hover:text-blue-800">

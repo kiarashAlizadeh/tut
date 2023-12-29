@@ -37,7 +37,7 @@ function Courses() {
   ]
   return (
     <>
-      <span className="mx-auto mb-5 mt-10 text-3xl font-bold text-black lg:mt-20 lg:text-4xl ">
+      <span className="font-IRANKharazmi mx-auto mb-5 mt-10 text-3xl font-bold text-black lg:mt-20 lg:text-4xl">
         دوره ها
       </span>
       <div className="mb-10 flex flex-wrap justify-center gap-4 px-5">

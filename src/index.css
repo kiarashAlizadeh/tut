@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* fonts */
+@font-face {
+  font-family: "IRANKharazmi";
+  src: url("./assets/fonts/IRANKharazmi.ttf");
+}
+
+@font-face {
+  font-family: "BMitra";
+  src: url("./assets/fonts/BMitraBold.ttf");
+}
+
+
+/* styles */
 body {
   /* @apply bg-[#1e1f26] text-white; */
-  @apply bg-white text-black;
+  @apply bg-white text-black font-BMitra;
 }
 
 /* navlink active */
