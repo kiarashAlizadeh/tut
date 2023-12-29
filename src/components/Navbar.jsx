@@ -21,7 +21,7 @@ function Navbar() {
     <>
       <nav className="select-none">
         <div className=" hidden justify-between px-10 py-8 text-[#606060] lg:flex xl:px-[108px]">
-          <img src={Logo} draggable="false" alt="TUT" className="w-32" />
+          <img src={Logo} draggable="false" alt="TUT" className="w-32 cursor-pointer" />
           <ul className="mx-4 flex justify-around gap-x-4 text-xl xl:gap-x-8">
             <li>
               <NavLink to="/"> صفحه اصلی </NavLink>
@@ -110,7 +110,7 @@ function Navbar() {
               {!isLogin && (
                 <button
                   //   onClick={(e) => setReqLogin(true)}
-                  className="flex w-full items-center justify-center gap-x-2 rounded-lg bg-[#095373] px-4 py-3 text-white hover:bg-opacity-75"
+                  className="flex w-full items-center justify-center gap-x-2 rounded-lg bg-[#095373] px-4 py-3 text-white hover:bg-cyan-200"
                 >
                   <img draggable="false" src={person} alt="person" />
                   ورود/ ثبت نام

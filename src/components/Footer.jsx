@@ -16,16 +16,16 @@ function Footer() {
           <li className="mb-2 border-b-2 border-white px-1 text-xl font-bold ">
             صفحات
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="/">صفحه اصلی</Link>
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="/">دوره ها</Link>
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="/">تماس با ما</Link>
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="/">درباره ما</Link>
           </li>
         </ul>
@@ -33,30 +33,30 @@ function Footer() {
           <li className="mb-2 border-b-2 border-white px-1 text-xl font-bold">
             دوره ها
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="/">دوره طراحی وب</Link>
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="/">دوره Python</Link>
           </li>
-          <li>
-            <Link to="/">دوره C#</Link>
+          <li className=" hover:text-blue-800 hover:font-bold ">
+            <Link to="/">دوره سی شارپ</Link>
           </li>
         </ul>
-        <ul className="flex flex-col items-center gap-y-1  text-black ">
+        <ul className="flex flex-col items-center gap-y-1  text-black">
           <li className="mb-2 border-b-2 border-white px-1 text-xl font-bold">
             راه های ارتباطی
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="mailto:TUT.Learning.77@gmail.com">Email</Link>
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="https://www.instagram.com/TUT_Learning/">Instagram</Link>
           </li>
-          <li>
+          <li className=" hover:text-blue-800 hover:font-bold">
             <Link to="https://t.me/TUT_Learning">Telegram</Link>
           </li>
-        </ul>
+        </ul >
         <div className="w-full border-t-2 border-white pt-3 text-center  text-black">
           <span>&copy; ۱۴۰۲ - کلیه حقوق محفوظ</span>
           <hr className="mt-2" />
