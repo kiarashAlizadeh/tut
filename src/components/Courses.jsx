@@ -37,12 +37,14 @@ function Courses() {
   ]
   return (
     <>
-    <p className="mx-auto mt-60 text-black font-bold text-3xl lg:text-4xl ">دوره ها</p>
-    <div className="my-10 flex flex-wrap justify-center gap-4 px-5">
-      {courses.map((course) => (
-        <Course key={course.id} {...course} />
-      ))}
-    </div>
+      <span className="mx-auto mb-5 mt-10 text-3xl font-bold text-black lg:mt-20 lg:text-4xl ">
+        دوره ها
+      </span>
+      <div className="mb-10 flex flex-wrap justify-center gap-4 px-5">
+        {courses.map((course) => (
+          <Course key={course.id} {...course} />
+        ))}
+      </div>
     </>
   )
 }
