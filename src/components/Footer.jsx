@@ -26,13 +26,13 @@ function Footer() {
               <Link to="/">صفحه اصلی</Link>
             </li>
             <li className=" hover:font-bold hover:text-blue-800">
-              <Link to="/">دوره ها</Link>
+              <Link to="/a">دوره ها</Link>
             </li>
             <li className=" hover:font-bold hover:text-blue-800">
-              <Link to="/">تماس با ما</Link>
+              <Link to="/b">تماس با ما</Link>
             </li>
             <li className=" hover:font-bold hover:text-blue-800">
-              <Link to="/">درباره ما</Link>
+              <Link to="/c">درباره ما</Link>
             </li>
           </ul>
           <ul className="flex flex-col items-center gap-y-1  text-black ">
@@ -40,13 +40,13 @@ function Footer() {
               دوره ها
             </li>
             <li className=" hover:font-bold hover:text-blue-800">
-              <Link to="/">دوره طراحی وب</Link>
-            </li>
-            <li className=" hover:font-bold hover:text-blue-800">
-              <Link to="/">دوره Python</Link>
+              <Link to="/course/1">دوره طراحی وب</Link>
             </li>
             <li className=" hover:font-bold hover:text-blue-800 ">
-              <Link to="/">دوره سی شارپ</Link>
+              <Link to="/course/2">دوره سی شارپ</Link>
+            </li>
+            <li className=" hover:font-bold hover:text-blue-800">
+              <Link to="/course/3">دوره Python</Link>
             </li>
           </ul>
           <ul className="flex flex-col items-center gap-y-1  text-black">
