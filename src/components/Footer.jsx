@@ -3,7 +3,7 @@ import { fullLogo } from "../assets"
 function Footer() {
   return (
     <>
-      <footer className="mx-auto flex w-full max-w-[1350px] flex-row flex-wrap items-start justify-center gap-8 px-5 py-10 text-white sm:justify-between md:px-28 md:pb-16">
+      <footer className="mx-auto mt-40 flex w-full max-w-[1350px] flex-row flex-wrap items-start justify-center gap-8 px-5 py-10 text-white sm:justify-between md:px-28 md:pb-16">
         <div className="max-w-[400px]">
           <img src={fullLogo} alt="TuT" className="mb-3 w-full" />
           <div className="text-justify">
