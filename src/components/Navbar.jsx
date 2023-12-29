@@ -19,9 +19,14 @@ function Navbar() {
   const isLogin = false
   return (
     <>
-      <nav className="select-none">
+      <nav className="sticky top-0 z-50 h-[69px]  select-none bg-white/95 lg:h-auto">
         <div className=" hidden justify-between px-10 py-8 text-[#606060] lg:flex xl:px-[108px]">
-          <img src={Logo} draggable="false" alt="TUT" className="w-32 cursor-pointer" />
+          <img
+            src={Logo}
+            draggable="false"
+            alt="TUT"
+            className="w-32 cursor-pointer"
+          />
           <ul className="mx-4 flex justify-around gap-x-4 text-xl xl:gap-x-8">
             <li>
               <NavLink to="/"> صفحه اصلی </NavLink>
@@ -54,9 +59,10 @@ function Navbar() {
           />
           <img src={Logo} draggable="false" alt="bilito" className="w-28" />
           <button
-          //   onClick={(e) => setReqLogin(true)}
+            className="rounded-full bg-[#095373] p-2"
+            //   onClick={(e) => setReqLogin(true)}
           >
-            <img src={personBlack} alt="person" />
+            <img src={person} alt="person" />
           </button>
           {/* main responsive menu */}
           <div class={` ${resNavbar ? "flex" : "hidden"}  relative z-50`}>
