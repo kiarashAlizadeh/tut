@@ -19,8 +19,8 @@ function Navbar() {
   const isLogin = false
   return (
     <>
-      <nav className="sticky top-0 z-50 h-[69px]  select-none bg-white/95 lg:h-auto">
-        <div className=" hidden justify-between px-10 py-8 text-[#606060] lg:flex xl:px-[108px]">
+      <nav className="sticky top-0 z-50 h-[69px] select-none bg-white/95 lg:h-auto">
+        <div className=" hidden justify-between px-10 pt-6 pb-4 text-[#606060] lg:flex xl:px-[108px]">
           <img
             src={Logo}
             draggable="false"
