@@ -236,15 +236,10 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
 
   return (
     <>
-      {isLoading ? (
-        <LoaderComponent />
-      ) : (
-        <>
-          <Navbar />
-          <CoursePageCom {...courseData[courseId - 1]} />
-          <Footer />
-        </>
-      )}
+      {isLoading ? <LoaderComponent /> : <> </>}
+      <Navbar />
+      <CoursePageCom {...courseData[courseId - 1]} />
+      <Footer />
     </>
   )
 }
