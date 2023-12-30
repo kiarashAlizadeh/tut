@@ -3,7 +3,7 @@ import { fullLogo } from "../assets"
 function Footer() {
   return (
     <>
-      <footer className="mx-auto mt-20 flex w-full max-w-[1350px] select-none flex-col flex-wrap items-center justify-around gap-8 px-5 pb-5 md:px-28 md:pb-16 lg:flex-row">
+      <footer className="mx-auto mt-20 flex w-full max-w-[1350px] select-none flex-col flex-wrap items-center justify-around gap-8 px-5 pb-5 md:px-28 md:pb-8 lg:flex-row">
         <div className="max-w-[400px]">
           <img
             src={fullLogo}
@@ -67,8 +67,7 @@ function Footer() {
           </ul>
         </div>
         <div className="w-full border-t-2 border-black/70 pt-3 text-center  text-black">
-          <span>&copy; ۱۴۰۲ - کلیه حقوق محفوظ</span>
-          <hr className="mt-2" />
+          <span> کلیه حقوق محفوظ - &copy; ۱۴۰۲ </span>
         </div>
       </footer>
     </>
