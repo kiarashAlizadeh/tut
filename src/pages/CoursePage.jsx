@@ -88,7 +88,7 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       date: "1402/12/09",
       price: "1,000,000",
       link: "https://docs.google.com/forms",
-      enabled: true,
+      enabled: false,
     },
     {
       id: 2,

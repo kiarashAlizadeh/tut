@@ -5,7 +5,7 @@ import { FaDollarSign } from "react-icons/fa"
 import { RiFunctionLine } from "react-icons/ri"
 import { FaPlaceOfWorship } from "react-icons/fa"
 import { BsCalendarDateFill } from "react-icons/bs"
-import { MdOutlineFollowTheSigns } from "react-icons/md"
+import { PiStudentFill } from "react-icons/pi"
 
 function CoursePageCom({
   image,
@@ -92,15 +92,25 @@ function CoursePageCom({
               </div>
             </div>
 
-            <button
-              className="my-10 hidden w-fit select-none items-center gap-x-1 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
-              onClick={() => {
-                window.location.href = link
-              }}
-            >
-              <MdOutlineFollowTheSigns />
-              ثبت نام در دوره
-            </button>
+            {enabled ? (
+              <button
+                className="my-10 hidden w-fit select-none items-center gap-x-1 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
+                onClick={() => {
+                  window.location.href = link
+                }}
+              >
+                <PiStudentFill />
+                ثبت نام در دوره
+              </button>
+            ) : (
+              <button
+                className="my-10 hidden w-fit select-none items-center gap-x-1 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:flex"
+                disabled="true"
+              >
+                <PiStudentFill />
+                پایان ثبت نام
+              </button>
+            )}
           </div>
           <div className="mt-5 flex flex-col flex-wrap items-center gap-y-5 px-5">
             <img
@@ -191,16 +201,25 @@ function CoursePageCom({
             </div>
           </div>
         </div>
-
-        <button
-          className="my-10 flex w-fit select-none items-center gap-x-1 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
-          onClick={() => {
-            window.location.href = link
-          }}
-        >
-          <MdOutlineFollowTheSigns />
-          ثبت نام در دوره
-        </button>
+        {enabled ? (
+          <button
+            className="my-10 flex w-fit select-none items-center gap-x-1 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
+            onClick={() => {
+              window.location.href = link
+            }}
+          >
+            <PiStudentFill />
+            ثبت نام در دوره
+          </button>
+        ) : (
+          <button
+            className="my-10 flex w-fit select-none items-center gap-x-1 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:hidden"
+            disabled="true"
+          >
+            <PiStudentFill />
+            پایان ثبت نام
+          </button>
+        )}
       </div>
     </>
   )
