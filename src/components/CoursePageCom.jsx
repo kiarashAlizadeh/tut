@@ -1,9 +1,13 @@
+// material ui
 import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import Typography from "@mui/material/Typography"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
+// react icons
+import { MdOutlineNavigateBefore } from "react-icons/md"
+import { FaHome } from "react-icons/fa"
 import { MdOutlineEdit } from "react-icons/md"
 import { IoTime } from "react-icons/io5"
 import { LiaChalkboardTeacherSolid } from "react-icons/lia"
@@ -13,6 +17,7 @@ import { BsCalendarDateFill } from "react-icons/bs"
 import { PiStudentFill } from "react-icons/pi"
 import { MdLibraryBooks } from "react-icons/md"
 import { FaCheckCircle } from "react-icons/fa"
+import { Link } from "react-router-dom"
 
 function CoursePageCom({
   image,
@@ -31,10 +36,26 @@ function CoursePageCom({
   price,
   enabled,
 }) {
-  console.log(courseDetails)
   return (
     <>
-      <div className="flex flex-col items-center xl:mb-10">
+      <div className="mx-auto flex w-fit flex-col items-center justify-between xl:mb-10">
+        <div className="my-2 flex w-[95%] items-center gap-x-2 rounded-lg border-[1px] border-gray-300 px-3  py-2 text-lg font-bold text-gray-500 xl:w-full">
+          <Link
+            to="/"
+            className="flex items-center gap-x-2 hover:text-[#62b1d8]"
+          >
+            <FaHome />
+            صفحه اصلی
+          </Link>
+          <MdOutlineNavigateBefore />
+          <Link to="/courses" className="hover:text-[#62b1d8]">
+            دوره ها
+          </Link>
+          <MdOutlineNavigateBefore />
+          <Link to="#" className="hover:text-[#62b1d8]">
+            {title}
+          </Link>
+        </div>
         <img src={image} alt={title} className="xl:hidden" draggable="false" />
         <div className="gap-x-20 xl:flex">
           <div className="flex flex-col items-center">
@@ -146,7 +167,7 @@ function CoursePageCom({
               </button>
             )}
           </div>
-          <div className="mt-5 flex flex-col flex-wrap items-center gap-y-5 px-5">
+          <div className="mt-5 flex flex-col flex-wrap items-center gap-y-5 px-5 xl:px-0">
             <img
               src={image}
               alt={title}
