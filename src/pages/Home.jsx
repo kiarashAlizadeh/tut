@@ -1,17 +1,34 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Courses from '../components/Courses';
+import { useState, useEffect } from "react"
+
+import LoaderComponent from "../components/LoaderComponent"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+import Courses from "../components/Courses"
 
 function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 1500)
+  }, [])
+
   return (
-    <div className="flex flex-col justify-between h-screen">
-      <Navbar />
-      <Header />
-      <Courses />
-      <Footer />
-    </div>
-  );
+    <>
+      {isLoading ? (
+        <LoaderComponent />
+      ) : (
+        <div className="flex h-screen flex-col justify-between">
+          <Navbar />
+          <Header />
+          <Courses />
+          <Footer />
+        </div>
+      )}
+    </>
+  )
 }
 
-export default Home;
+export default Home

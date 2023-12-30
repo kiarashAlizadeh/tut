@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
+import LoaderComponent from "../components/LoaderComponent"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import CoursePageCom from "../components/CoursePageCom"
@@ -223,11 +225,26 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       enabled: true,
     },
   ]
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 1000)
+  }, [])
+
   return (
     <>
-      <Navbar />
-      <CoursePageCom {...courseData[courseId - 1]} />
-      <Footer />
+      {isLoading ? (
+        <LoaderComponent />
+      ) : (
+        <>
+          <Navbar />
+          <CoursePageCom {...courseData[courseId - 1]} />
+          <Footer />
+        </>
+      )}
     </>
   )
 }
