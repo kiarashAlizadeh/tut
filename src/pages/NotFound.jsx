@@ -3,7 +3,12 @@ import { useState, useEffect } from "react"
 import LoaderComponent from "../components/LoaderComponent"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+
 import { notFound } from "../assets"
+
+// react icons
+import { FaHome } from "react-icons/fa"
+import { BiSolidError } from "react-icons/bi"
 
 function NotFound() {
   const [isLoading, setIsLoading] = useState(true)
@@ -18,8 +23,9 @@ function NotFound() {
       {isLoading ? <LoaderComponent /> : <> </>}
       <Navbar />
       <div className="mx-auto mt-5 flex max-h-dvh max-w-[800px] select-none flex-col items-center px-1 sm:h-auto">
-        <h1 className="mb-1 text-2xl font-bold text-[#095373] md:text-3xl">
-          !Error
+        <h1 className="mb-1 flex items-start gap-x-1 text-2xl font-bold text-[#095373] md:text-3xl">
+          Error
+          <BiSolidError />
         </h1>
 
         <img
@@ -32,9 +38,10 @@ function NotFound() {
           صفحه مورد نظر شما پیدا نشد!
         </div>
         <button
-          className="rounded-lg bg-[#0062d1] px-4 py-2 font-semibold text-white hover:bg-opacity-70 md:text-xl"
+          className="flex items-center gap-x-2 rounded-lg bg-[#0062d1] px-4 py-2 font-semibold text-white hover:bg-opacity-70 md:text-xl"
           onClick={() => (window.location.href = "/")}
         >
+          <FaHome />
           بازگشت به صفحه اصلی
         </button>
       </div>

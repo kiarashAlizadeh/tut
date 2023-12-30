@@ -1,5 +1,9 @@
 import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
+
+import { FcAbout } from "react-icons/fc"
+import { FaShoppingCart } from "react-icons/fa"
+
 import {
   fullLogo,
   person,
@@ -19,7 +23,7 @@ function Navbar() {
   const isLogin = false
   return (
     <>
-      <nav className="font-IRANKharazmi sticky top-0 z-50 h-[69px] select-none bg-white/95 lg:h-auto">
+      <nav className="sticky top-0 z-50 h-[69px] select-none bg-white/95 font-IRANKharazmi lg:h-auto">
         <div className=" hidden justify-between px-10 pb-4 pt-6 text-[#606060] lg:flex xl:px-[108px]">
           <img
             src={Logo}
@@ -88,7 +92,7 @@ function Navbar() {
                 </li>
                 <li>
                   <NavLink to="/a" className="flex items-center gap-x-2">
-                    <img draggable="false" src={bime} alt="arrow" />
+                    <FaShoppingCart />
                     دوره ها
                   </NavLink>
                 </li>
@@ -100,7 +104,7 @@ function Navbar() {
                 </li>
                 <li>
                   <NavLink to="/d" className="flex items-center gap-x-2">
-                    <img draggable="false" src={aboutUs} alt="arrow" />
+                    <FcAbout />
                     درباره ما
                   </NavLink>
                 </li>
