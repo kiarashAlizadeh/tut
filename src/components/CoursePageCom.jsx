@@ -2,10 +2,11 @@ import { MdOutlineEdit } from "react-icons/md"
 import { IoTime } from "react-icons/io5"
 import { LiaChalkboardTeacherSolid } from "react-icons/lia"
 import { FaDollarSign } from "react-icons/fa"
-import { RiFunctionLine } from "react-icons/ri"
-import { FaPlaceOfWorship } from "react-icons/fa"
+import { IoLocationSharp } from "react-icons/io5"
 import { BsCalendarDateFill } from "react-icons/bs"
 import { PiStudentFill } from "react-icons/pi"
+import { MdLibraryBooks } from "react-icons/md"
+import { FaCheckCircle } from "react-icons/fa"
 
 function CoursePageCom({
   image,
@@ -14,9 +15,10 @@ function CoursePageCom({
   courseDetailsTitle,
   courseDetails,
   prerequisite,
+  level,
+  status,
   courseTime,
   teacher,
-  online,
   place,
   date,
   link,
@@ -27,64 +29,89 @@ function CoursePageCom({
     <>
       <div className="flex flex-col items-center xl:mb-10">
         <img src={image} alt={title} className="xl:hidden" draggable="false" />
-        <div className="gap-x-10 xl:flex">
+        <div className="gap-x-20 xl:flex">
           <div className="flex flex-col items-center">
             <div class="mx-auto mt-10 hidden w-fit select-none rounded-xl border-2 border-black px-4 py-4 text-xl xl:block">
               <h3 className="mb-4 text-center font-IRANKharazmi text-3xl font-black">
                 جزئیات دوره
               </h3>
-              <div className="flex flex-col gap-y-2">
+              <div className="flex flex-col gap-y-4">
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <MdOutlineEdit />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <MdLibraryBooks />
+                    </span>
+                    سطح دوره :
+                  </b>
+                  <span className="text-[#2f6177]">{level}</span>
+                </span>
+                <span className="flex gap-x-2">
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <MdOutlineEdit />
+                    </span>
                     پیش نیاز :
                   </b>
-                  <span>{prerequisite}</span>
+                  <span className="text-[#2f6177]">{prerequisite}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <IoTime />
-                    مدت زمان دوره :
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <IoTime />
+                    </span>
+                    مدت دوره :
                   </b>
-                  <span>{courseTime} ساعت</span>
+                  <span className="text-[#2f6177]">{courseTime} ساعت</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <LiaChalkboardTeacherSolid />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <LiaChalkboardTeacherSolid />
+                    </span>
                     مدرس دوره :
                   </b>
-                  <span>{teacher}</span>
+                  <span className="text-[#2f6177]">{teacher}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <RiFunctionLine />
-                    شیوه برگزاری دوره :
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <IoLocationSharp />
+                    </span>
+                    نوع دوره :
                   </b>
-                  <span>{online}</span>
+                  <span className="text-[#2f6177]">{place}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <FaPlaceOfWorship />
-                    محل برگزاری دوره :
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <FaCheckCircle />
+                    </span>
+                    وضعیت دوره :
                   </b>
-                  <span>{place}</span>
+                  <span className="text-[#2f6177]">{status}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <BsCalendarDateFill />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <BsCalendarDateFill />
+                    </span>
                     تاریخ شروع دوره :
                   </b>
-                  <span>{date}</span>
+                  <span className="text-[#2f6177]">{date}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <FaDollarSign />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <FaDollarSign />
+                    </span>
                     هزینه دوره :
                   </b>
                   {price === 0 ? (
-                    <span className="font-bold text-red-700">رایگان!</span>
+                    <span className="text-xl font-black text-red-700">
+                      رایگان!
+                    </span>
                   ) : (
-                    <span className="font-bold text-[#14749e]">
+                    <span className="font-bold text-[#2f6177]">
                       {price} تومان
                     </span>
                   )}
@@ -94,7 +121,7 @@ function CoursePageCom({
 
             {enabled ? (
               <button
-                className="my-10 hidden w-fit select-none items-center gap-x-1 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
+                className="my-10 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
                 onClick={() => {
                   window.location.href = link
                 }}
@@ -104,7 +131,7 @@ function CoursePageCom({
               </button>
             ) : (
               <button
-                className="my-10 hidden w-fit select-none items-center gap-x-1 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:flex"
+                className="my-10 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:flex"
                 disabled="true"
               >
                 <PiStudentFill />
@@ -135,58 +162,83 @@ function CoursePageCom({
               <h3 className="mb-4 text-center font-IRANKharazmi text-2xl font-black">
                 جزئیات دوره
               </h3>
-              <div className="flex flex-col gap-y-2">
+              <div className="flex flex-col gap-y-4">
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <MdOutlineEdit />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <MdLibraryBooks />
+                    </span>
+                    سطح دوره :
+                  </b>
+                  <span className="text-[#2f6177]">{level}</span>
+                </span>
+                <span className="flex gap-x-2">
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <MdOutlineEdit />
+                    </span>
                     پیش نیاز :
                   </b>
-                  <span>{prerequisite}</span>
+                  <span className="text-[#2f6177]">{prerequisite}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <IoTime />
-                    مدت زمان دوره :
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <IoTime />
+                    </span>
+                    مدت دوره :
                   </b>
-                  <span>{courseTime} ساعت</span>
+                  <span className="text-[#2f6177]">{courseTime} ساعت</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <LiaChalkboardTeacherSolid />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <LiaChalkboardTeacherSolid />
+                    </span>
                     مدرس دوره :
                   </b>
-                  <span>{teacher}</span>
+                  <span className="text-[#2f6177]">{teacher}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <RiFunctionLine />
-                    شیوه برگزاری دوره :
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <IoLocationSharp />
+                    </span>
+                    نوع دوره :
                   </b>
-                  <span>{online}</span>
+                  <span className="text-[#2f6177]">{place}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <FaPlaceOfWorship />
-                    محل برگزاری دوره :
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <FaCheckCircle />
+                    </span>
+                    وضعیت دوره :
                   </b>
-                  <span>{place}</span>
+                  <span className="text-[#2f6177]">{status}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <BsCalendarDateFill />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <BsCalendarDateFill />
+                    </span>
                     تاریخ شروع دوره :
                   </b>
-                  <span>{date}</span>
+                  <span className="text-[#2f6177]">{date}</span>
                 </span>
                 <span className="flex gap-x-2">
-                  <b className="flex items-center gap-x-1">
-                    <FaDollarSign />
+                  <b className="flex items-center gap-x-2 text-gray-500">
+                    <span className="text-blue-600">
+                      <FaDollarSign />
+                    </span>
                     هزینه دوره :
                   </b>
                   {price === 0 ? (
-                    <span className="font-bold text-red-700">رایگان!</span>
+                    <span className="text-xl font-black text-red-700">
+                      رایگان!
+                    </span>
                   ) : (
-                    <span className="font-bold text-[#14749e]">
+                    <span className="font-bold text-[#2f6177]">
                       {price} تومان
                     </span>
                   )}
@@ -203,7 +255,7 @@ function CoursePageCom({
         </div>
         {enabled ? (
           <button
-            className="my-10 flex w-fit select-none items-center gap-x-1 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
+            className="my-10 flex w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
             onClick={() => {
               window.location.href = link
             }}
@@ -213,7 +265,7 @@ function CoursePageCom({
           </button>
         ) : (
           <button
-            className="my-10 flex w-fit select-none items-center gap-x-1 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:hidden"
+            className="my-10 flex w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:hidden"
             disabled="true"
           >
             <PiStudentFill />
