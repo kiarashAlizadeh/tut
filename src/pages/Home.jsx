@@ -17,13 +17,16 @@ function Home() {
 
   return (
     <>
-      {isLoading ? <LoaderComponent /> : <> </>}
-      <div className="flex h-screen flex-col justify-between">
-        <Navbar />
-        <Header />
-        <Courses />
-        <Footer />
-      </div>
+      {isLoading ? (
+        <LoaderComponent />
+      ) : (
+        <div className="flex h-screen flex-col justify-between">
+          <Navbar />
+          <Header />
+          <Courses />
+          <Footer />
+        </div>
+      )}
     </>
   )
 }
