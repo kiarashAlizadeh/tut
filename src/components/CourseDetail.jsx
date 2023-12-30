@@ -35,6 +35,7 @@ function CourseDetail({
   link,
   price,
   enabled,
+  youtube,
 }) {
   return (
     <>
@@ -319,6 +320,31 @@ function CourseDetail({
           </button>
         )}
       </div>
+      {youtube ? (
+        <div className="mt-16 flex w-full flex-col items-center">
+          <h2 className="mb-5 text-center font-IRANKharazmi text-2xl font-black">
+            فیلم های ضبط شده {title} {level}
+          </h2>
+
+          {youtube.map((video, index) => (
+            <div className="mb-10">
+              <div className="mb-2 text-xl font-bold">
+                {title} {level} - قسمت {index + 1}:
+              </div>
+              <iframe
+                className="rounded-xl sm:h-[315px] sm:w-[560px] lg:h-[415px] lg:w-[760px]"
+                src={video}
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <> </>
+      )}
     </>
   )
 }

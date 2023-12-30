@@ -178,7 +178,7 @@ const StyledSpan = styled.span`
 
 const BookLoader = ({
   className = `bookloader`,
-  text = `لطفا تا بارگزاری کامل صفحه منتظر بمانید...`,
+  text = `لطفا تا بارگذاری کامل صفحه منتظر بمانید...`,
   background = `linear-gradient(135deg, #23c4f8, #275efe)`,
   shadowColor = `rgba(39, 94, 254, .28)`,
   textColor = `#6c7486`,

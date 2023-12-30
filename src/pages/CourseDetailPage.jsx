@@ -92,6 +92,7 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       status: "در حال برگزاری",
       link: "https://docs.google.com/forms",
       enabled: false,
+      youtube: "",
     },
     {
       id: 2,
@@ -147,6 +148,10 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       status: "در حال ثبت نام",
       link: `https://docs.google.com/forms`,
       enabled: true,
+      youtube: [
+        "https://www.youtube.com/embed/J0FhV3dM80o?si=QF4DIENGreRPdSNq",
+        "https://www.youtube.com/embed/hnjly9iBHso?si=KNOFquSAZR0M6tZo",
+      ],
     },
     {
       id: 3,
@@ -201,6 +206,11 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       status: "اتمام دوره",
       link: "https://docs.google.com/forms",
       enabled: false,
+      youtube: [
+        "https://www.youtube.com/embed/oxXAb8IikHM?si=qGiSIRtW39bxmcd8",
+        "https://www.youtube.com/embed/oxXAb8IikHM?si=xeQXYcHmMyPO2UHu",
+        "https://www.youtube.com/embed/sTEf4_mrLvw?si=CZwa5_3Xdmgv91WG",
+      ],
     },
   ]
 
