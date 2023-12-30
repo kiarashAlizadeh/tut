@@ -19,7 +19,7 @@ import { MdLibraryBooks } from "react-icons/md"
 import { FaCheckCircle } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
-function CoursePageCom({
+function CourseDetail({
   image,
   title,
   desc,
@@ -323,4 +323,4 @@ function CoursePageCom({
   )
 }
 
-export default CoursePageCom
+export default CourseDetail

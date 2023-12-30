@@ -334,7 +334,7 @@ const BookLoader = ({
   )
 }
 
-const LoaderComponent = () => {
+const Loader = () => {
   return (
     <>
       <div className="fixed top-0 z-[100] h-full  w-full  bg-white font-bold">
@@ -350,4 +350,4 @@ const LoaderComponent = () => {
     </>
   )
 }
-export default LoaderComponent
+export default Loader

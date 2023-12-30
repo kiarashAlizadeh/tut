@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-import LoaderComponent from "../components/LoaderComponent"
+import Loader from "../components/Loader"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
@@ -20,7 +20,7 @@ function NotFound() {
   }, [])
   return (
     <>
-      {isLoading ? <LoaderComponent /> : <> </>}
+      {isLoading ? <Loader /> : <> </>}
       <Navbar />
       <div className="mx-auto mt-5 flex max-h-dvh max-w-[800px] select-none flex-col items-center px-1 sm:h-auto">
         <h1 className="mb-1 flex items-center gap-x-1 text-5xl font-bold text-[#095373] md:text-6xl">

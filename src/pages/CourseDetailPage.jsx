@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
-import LoaderComponent from "../components/LoaderComponent"
+import Loader from "../components/Loader"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import CoursePageCom from "../components/CoursePageCom"
+import CourseDetail from "../components/CourseDetail"
 
 import { cSharpCourse, pythonCourse, frontEndCourse } from "../assets"
 
-function CoursePage() {
+function CourseDetailPage() {
   const courseId = useParams().courseId
   const courseData = [
     {
@@ -89,7 +89,7 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       place: "آنلاین - اسکایپ",
       date: "1402/12/09",
       price: "1,000,000",
-      status: "در حال ثبت نام",
+      status: "در حال برگزاری",
       link: "https://docs.google.com/forms",
       enabled: false,
     },
@@ -144,7 +144,7 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       place: "آنلاین - اسکایپ",
       date: "1402/12/09",
       price: 0,
-      status: "در حال برگزاری",
+      status: "در حال ثبت نام",
       link: `https://docs.google.com/forms`,
       enabled: true,
     },
@@ -200,7 +200,7 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
       price: "500,000",
       status: "اتمام دوره",
       link: "https://docs.google.com/forms",
-      enabled: true,
+      enabled: false,
     },
   ]
 
@@ -214,12 +214,12 @@ JavaScript به عنوان یک زبان برنامه‌نویسی کلاینت 
 
   return (
     <>
-      {isLoading ? <LoaderComponent /> : <> </>}
+      {isLoading ? <Loader /> : <> </>}
       <Navbar />
-      <CoursePageCom {...courseData[courseId - 1]} />
+      <CourseDetail {...courseData[courseId - 1]} />
       <Footer />
     </>
   )
 }
 
-export default CoursePage
+export default CourseDetailPage

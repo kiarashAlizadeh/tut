@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-import LoaderComponent from "../components/LoaderComponent"
+import Loader from "../components/Loader"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <>
-      {isLoading ? <LoaderComponent /> : <> </>}
+      {isLoading ? <Loader /> : <> </>}
       <div className="flex h-screen flex-col justify-between">
         <Navbar />
         <Header />
