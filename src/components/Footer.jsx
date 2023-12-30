@@ -22,16 +22,16 @@ function Footer() {
             <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
               صفحات
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="/">صفحه اصلی</Link>
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="/a">دوره ها</Link>
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="/b">تماس با ما</Link>
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="/c">درباره ما</Link>
             </li>
           </ul>
@@ -39,13 +39,13 @@ function Footer() {
             <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
               دوره ها
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="/course/1">دوره طراحی وب</Link>
             </li>
-            <li className=" hover:font-bold hover:text-blue-800 ">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="/course/2">دوره سی شارپ</Link>
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="/course/3">دوره Python</Link>
             </li>
           </ul>
@@ -53,15 +53,15 @@ function Footer() {
             <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
               راه های ارتباطی
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="mailto:TUT.Learning.77@gmail.com">Email</Link>
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="https://www.instagram.com/TUT_Learning/">
                 Instagram
               </Link>
             </li>
-            <li className=" hover:font-bold hover:text-blue-800">
+            <li className=" hover:text-blue-800 lg:hover:font-bold">
               <Link to="https://t.me/TUT_Learning">Telegram</Link>
             </li>
           </ul>
