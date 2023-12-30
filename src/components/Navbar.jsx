@@ -1,5 +1,13 @@
 import { useState } from "react"
+<<<<<<< HEAD
 import {NavLink } from "react-router-dom"
+=======
+import { Link, NavLink } from "react-router-dom"
+
+import { FcAbout } from "react-icons/fc"
+import { FaShoppingCart } from "react-icons/fa"
+
+>>>>>>> 3bf12de428f700b9779557084128df4da5807190
 import {
   person,
   personBlack,
@@ -31,7 +39,7 @@ function Navbar() {
               <NavLink to="/"> صفحه اصلی </NavLink>
             </li>
             <li>
-              <NavLink to="/Course">دوره ها</NavLink>
+              <NavLink to="/courses">دوره ها</NavLink>
             </li>
             <li>
               <NavLink to="/b">تماس با ما</NavLink>
@@ -86,8 +94,8 @@ function Navbar() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/a" className="flex items-center gap-x-2">
-                    <img draggable="false" src={bime} alt="arrow" />
+                  <NavLink to="/courses" className="flex items-center gap-x-2">
+                    <FaShoppingCart />
                     دوره ها
                   </NavLink>
                 </li>
@@ -99,7 +107,7 @@ function Navbar() {
                 </li>
                 <li>
                   <NavLink to="/d" className="flex items-center gap-x-2">
-                    <img draggable="false" src={aboutUs} alt="arrow" />
+                    <FcAbout />
                     درباره ما
                   </NavLink>
                 </li>

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+import { FaLongArrowAltLeft } from "react-icons/fa"
+
 function Course({ id, title, desc, bgImage, logo, btnColor }) {
   return (
     <>
@@ -14,15 +16,17 @@ function Course({ id, title, desc, bgImage, logo, btnColor }) {
       >
         <img src={logo} className="z-10" alt={`${logo}`} />
         <div className="flex flex-col items-center gap-y-3">
-          <span className="text-xl font-bold text-white font-IRANKharazmi">{title}</span>
+          <span className="font-IRANKharazmi text-xl font-bold text-white">
+            {title}
+          </span>
           <span className="text-sm  text-white">{desc}</span>
         </div>
         <Link
-          className="mx-auto w-fit rounded-xl  px-4 py-2 text-xl font-bold text-white"
-          to={`/course/${id}`}
           style={{ backgroundColor: `#${btnColor}` }}
+          className="courseBtn mx-auto flex  w-fit flex-row-reverse items-center gap-x-1 rounded-xl px-4 py-2 text-xl font-bold text-white"
+          to={`/course/${id}`}
         >
-          جزئیات دوره
+          <FaLongArrowAltLeft /> جزئیات دوره
         </Link>
       </div>
     </>
