@@ -1,7 +1,6 @@
 import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import {NavLink } from "react-router-dom"
 import {
-  fullLogo,
   person,
   personBlack,
   hamburgerMenu,
@@ -20,14 +19,14 @@ function Navbar() {
   return (
     <>
       <nav className="font-IRANKharazmi sticky top-0 z-50 h-[69px] select-none bg-white/95 lg:h-auto">
-        <div className=" hidden justify-between px-10 pb-4 pt-6 text-[#606060] lg:flex xl:px-[108px]">
+        <div className=" hidden justify-between items-center px-10 pb-4 pt-4 text-[#606060] lg:flex xl:px-[108px]">
           <img
             src={Logo}
             draggable="false"
             alt="TUT"
             className="w-32 cursor-pointer"
           />
-          <ul className="mx-4 flex justify-around gap-x-4 text-xl xl:gap-x-8">
+          <ul className="mx-4 flex justify-around  gap-x-4 text-base xl:gap-x-8">
             <li>
               <NavLink to="/"> صفحه اصلی </NavLink>
             </li>

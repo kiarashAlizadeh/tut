@@ -23,7 +23,7 @@ body {
 
 /* navlink active */
 .active {
-  @apply text-base font-bold text-[#1f6182] lg:text-xl lg:hover:text-[#62b1d8] !important;
+  @apply  font-bold text-[#1f6182]  lg:hover:text-[#62b1d8] !important;
 }
 
 nav ul li a {
