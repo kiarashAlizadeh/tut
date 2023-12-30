@@ -18,6 +18,9 @@ import notFound from "./images/notFound.png"
 
 // courses
 import cSharp from "./images/courses/cSharp.svg"
+import cSharpCourse from "./images/courses/cSharpCourse.png"
+import pythonCourse from "./images/courses/pythonCourse.webp"
+import frontEndCourse from "./images/courses/frontEndCourse.jpg"
 // import bgMainCSharp from "./images/courses/bgMainCSharp.svg"
 import bgMainCSharp from "./images/courses/Group6.png"
 import python from "./images/courses/python.svg"
@@ -46,4 +49,7 @@ export {
   bgMainWeb,
   Header1,
   notFound,
+  cSharpCourse,
+  pythonCourse,
+  frontEndCourse,
 }
