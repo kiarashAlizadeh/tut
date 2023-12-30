@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* fonts */
 @font-face {
   font-family: "IRANKharazmi";
@@ -14,11 +13,10 @@
   src: url("./assets/fonts/BMitraBold.ttf");
 }
 
-
 /* styles */
 body {
   /* @apply bg-[#1e1f26] text-white; */
-  @apply bg-white text-black font-BMitra;
+  @apply bg-white font-BMitra text-black;
 }
 
 /* navlink active */
@@ -56,4 +54,9 @@ nav ul li a {
 .navbar-menu.flex {
   display: flex;
   animation-name: slideIn;
+}
+
+/* course */
+.courseBtn {
+  @apply hover:bg-opacity-70 !important;
 }

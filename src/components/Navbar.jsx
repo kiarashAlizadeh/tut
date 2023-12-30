@@ -36,7 +36,7 @@ function Navbar() {
               <NavLink to="/"> صفحه اصلی </NavLink>
             </li>
             <li>
-              <NavLink to="/Course">دوره ها</NavLink>
+              <NavLink to="/courses">دوره ها</NavLink>
             </li>
             <li>
               <NavLink to="/b">تماس با ما</NavLink>
@@ -91,7 +91,7 @@ function Navbar() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/a" className="flex items-center gap-x-2">
+                  <NavLink to="/courses" className="flex items-center gap-x-2">
                     <FaShoppingCart />
                     دوره ها
                   </NavLink>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltLeft } from "react-icons/fa"
 
 function Course({ id, title, desc, bgImage, logo, btnColor }) {
   return (
@@ -22,9 +22,9 @@ function Course({ id, title, desc, bgImage, logo, btnColor }) {
           <span className="text-sm  text-white">{desc}</span>
         </div>
         <Link
-          className="mx-auto w-fit rounded-xl  px-4 py-2 text-xl font-bold text-white flex gap-x-1 items-center flex-row-reverse"
-          to={`/course/${id}`}
           style={{ backgroundColor: `#${btnColor}` }}
+          className="courseBtn mx-auto flex  w-fit flex-row-reverse items-center gap-x-1 rounded-xl px-4 py-2 text-xl font-bold text-white"
+          to={`/course/${id}`}
         >
           <FaLongArrowAltLeft /> جزئیات دوره
         </Link>

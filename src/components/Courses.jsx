@@ -8,7 +8,7 @@ import {
   bgMainWeb,
 } from "../assets"
 
-function Courses() {
+function Courses({ courseTitle, btnText, btnLink }) {
   const courses = [
     {
       id: 1,
@@ -37,14 +37,20 @@ function Courses() {
   ]
   return (
     <>
-      <span className="font-IRANKharazmi mx-auto mb-5 mt-10 text-3xl font-bold text-black lg:mt-20 lg:text-4xl">
-        دوره ها
-      </span>
+      <h1 className="mx-auto mb-5 mt-10 w-fit font-IRANKharazmi text-3xl font-bold text-black lg:text-4xl">
+        {courseTitle}
+      </h1>
       <div className="mb-10 flex flex-wrap justify-center gap-4 px-5">
         {courses.map((course) => (
           <Course key={course.id} {...course} />
         ))}
       </div>
+      <button
+        className="mx-auto flex w-fit items-center gap-x-2 rounded-lg bg-[#0062d1] px-4 py-2 font-semibold text-white hover:bg-opacity-70 md:text-xl"
+        onClick={() => (window.location.href = btnLink)}
+      >
+        {btnText}
+      </button>
     </>
   )
 }

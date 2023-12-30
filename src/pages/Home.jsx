@@ -21,7 +21,11 @@ function Home() {
       <div className="flex h-screen flex-col justify-between">
         <Navbar />
         <Header />
-        <Courses />
+        <Courses
+          courseTitle={"جدیدترین دوره ها"}
+          btnText={"مشاهده تمامی دوره ها"}
+          btnLink={"/courses"}
+        />
         <Footer />
       </div>
     </>

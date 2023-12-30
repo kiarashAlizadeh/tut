@@ -2,7 +2,7 @@ import { Header1 } from "../assets"
 function Header() {
   return (
     <>
-      <header className="w-full">
+      <header className="w-full mb-10">
         <img
           src={Header1}
           alt="tut header"
