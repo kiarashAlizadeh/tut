@@ -6,7 +6,7 @@ function NotFound() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto mt-5 flex max-h-dvh max-w-[800px] select-none flex-col items-center sm:h-auto">
+      <div className="mx-auto mt-5 flex max-h-dvh max-w-[800px] select-none flex-col items-center sm:h-auto px-1">
         <h1 className="mb-1 text-2xl font-bold text-[#095373] md:text-3xl">
           !Error
         </h1>
@@ -14,7 +14,7 @@ function NotFound() {
         <img
           src={notFound}
           alt="notFound"
-          className="md:max-h-[500px] max-h-[240px] select-none"
+          className="md:max-h-[500px] select-none"
           draggable="false"
         />
         <div className="mb-5 text-lg font-semibold text-[#095373] md:text-xl">
