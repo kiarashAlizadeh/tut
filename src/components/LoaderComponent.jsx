@@ -337,13 +337,15 @@ const BookLoader = ({
 const LoaderComponent = () => {
   return (
     <>
-      <div className="flex h-svh items-center justify-center bg-white text-center font-bold">
-        <BookLoader
-          background={"linear-gradient(135deg, #075271, #14749e)"}
-          desktopSize={"100px"}
-          mobileSize={"80px"}
-          textColor={"#075271"}
-        />
+      <div className="fixed top-0 z-[100] h-full  w-full  bg-white font-bold">
+        <div className="flex h-full items-center justify-center">
+          <BookLoader
+            background={"linear-gradient(135deg, #075271, #14749e)"}
+            desktopSize={"100px"}
+            mobileSize={"80px"}
+            textColor={"#075271"}
+          />
+        </div>
       </div>
     </>
   )
