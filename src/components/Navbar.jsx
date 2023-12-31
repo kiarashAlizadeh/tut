@@ -1,13 +1,9 @@
 import { useState } from "react"
-<<<<<<< HEAD
-import {NavLink } from "react-router-dom"
-=======
 import { Link, NavLink } from "react-router-dom"
 
 import { FcAbout } from "react-icons/fc"
 import { FaShoppingCart } from "react-icons/fa"
 
->>>>>>> 3bf12de428f700b9779557084128df4da5807190
 import {
   person,
   personBlack,
