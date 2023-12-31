@@ -2,7 +2,6 @@
 import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
-import Typography from "@mui/material/Typography"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 // react icons
@@ -40,34 +39,32 @@ function CourseDetail({
   return (
     <>
       <div className="mx-auto flex w-fit flex-col items-center justify-between xl:mb-10">
-        <div className="my-2 flex w-[95%] items-center gap-x-2 rounded-lg border-[1px] border-gray-300 px-3  py-2 text-lg font-bold text-gray-500 xl:w-full">
+        <div className="mb-5 mt-3 flex w-[95%] items-center gap-x-2 rounded-lg border-[1px] border-gray-300 px-3  py-2 text-lg font-bold text-gray-500 xl:mt-0 xl:w-full">
           <Link
             to="/"
-            className="flex items-center gap-x-2 hover:text-[#62b1d8]"
+            className="flex items-center gap-x-2 hover:text-[#14749d]"
           >
             <FaHome />
             صفحه اصلی
           </Link>
           <MdOutlineNavigateBefore />
-          <Link to="/courses" className="hover:text-[#62b1d8]">
+          <Link to="/courses" className="hover:text-[#14749d]">
             دوره ها
           </Link>
           <MdOutlineNavigateBefore />
-          <Link to="#" className="hover:text-[#62b1d8]">
-            {title}
-          </Link>
+          <span className="cursor-default">{title}</span>
         </div>
         <img src={image} alt={title} className="xl:hidden" draggable="false" />
-        <div className="gap-x-20 xl:flex">
+        <div className="  gap-x-20 xl:flex">
           <div className="flex flex-col items-center">
-            <div class="mx-auto mt-10 hidden w-fit select-none rounded-xl border-2 border-black px-4 py-4 text-xl xl:block">
+            <div class="mx-auto hidden w-fit select-none rounded-xl border-2 border-black px-4 py-4 text-xl xl:block">
               <h3 className="mb-4 text-center font-IRANKharazmi text-3xl font-black">
                 جزئیات دوره
               </h3>
               <div className="flex flex-col gap-y-4">
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <MdLibraryBooks />
                     </span>
                     سطح دوره :
@@ -76,7 +73,7 @@ function CourseDetail({
                 </span>
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <MdOutlineEdit />
                     </span>
                     پیش نیاز :
@@ -85,7 +82,7 @@ function CourseDetail({
                 </span>
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <IoTime />
                     </span>
                     مدت دوره :
@@ -94,7 +91,7 @@ function CourseDetail({
                 </span>
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <LiaChalkboardTeacherSolid />
                     </span>
                     مدرس دوره :
@@ -103,16 +100,16 @@ function CourseDetail({
                 </span>
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <IoLocationSharp />
                     </span>
-                    نوع دوره :
+                    نحوه برگزاری :
                   </b>
                   <span className="text-[#2f6177]">{place}</span>
                 </span>
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <FaCheckCircle />
                     </span>
                     وضعیت دوره :
@@ -121,7 +118,7 @@ function CourseDetail({
                 </span>
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <BsCalendarDateFill />
                     </span>
                     تاریخ شروع دوره :
@@ -130,7 +127,7 @@ function CourseDetail({
                 </span>
                 <span className="flex gap-x-2">
                   <b className="flex items-center gap-x-2 text-gray-500">
-                    <span className="text-blue-600">
+                    <span className="text-[#14749e]">
                       <FaDollarSign />
                     </span>
                     هزینه دوره :
@@ -168,14 +165,14 @@ function CourseDetail({
               </button>
             )}
           </div>
-          <div className="mt-5 flex flex-col flex-wrap items-center gap-y-5 px-5 xl:px-0">
+          <div className="flex flex-col flex-wrap items-center gap-y-5 px-5 xl:px-0">
             <img
               src={image}
               alt={title}
               className="hidden xl:block xl:max-h-[450px] xl:max-w-[800px] xl:rounded-xl"
               draggable="false"
             />
-            <div className="max-w-[800px]">
+            <div className="mt-5 max-w-[800px]">
               <h1 className="mb-3 font-IRANKharazmi text-2xl font-black">
                 {title}
               </h1>
@@ -224,7 +221,7 @@ function CourseDetail({
           <div className="flex flex-col gap-y-4">
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <MdLibraryBooks />
                 </span>
                 سطح دوره :
@@ -233,7 +230,7 @@ function CourseDetail({
             </span>
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <MdOutlineEdit />
                 </span>
                 پیش نیاز :
@@ -242,7 +239,7 @@ function CourseDetail({
             </span>
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <IoTime />
                 </span>
                 مدت دوره :
@@ -251,7 +248,7 @@ function CourseDetail({
             </span>
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <LiaChalkboardTeacherSolid />
                 </span>
                 مدرس دوره :
@@ -260,16 +257,16 @@ function CourseDetail({
             </span>
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <IoLocationSharp />
                 </span>
-                نوع دوره :
+                نحوه برگزاری :
               </b>
               <span className="text-[#2f6177]">{place}</span>
             </span>
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <FaCheckCircle />
                 </span>
                 وضعیت دوره :
@@ -278,7 +275,7 @@ function CourseDetail({
             </span>
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <BsCalendarDateFill />
                 </span>
                 تاریخ شروع دوره :
@@ -287,7 +284,7 @@ function CourseDetail({
             </span>
             <span className="flex gap-x-2">
               <b className="flex items-center gap-x-2 text-gray-500">
-                <span className="text-blue-600">
+                <span className="text-[#14749e]">
                   <FaDollarSign />
                 </span>
                 هزینه دوره :

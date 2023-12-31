@@ -8,6 +8,9 @@ import home from "./icons/navbar/home.svg"
 import bime from "./icons/navbar/bime.svg"
 import contactUs from "./icons/navbar/contactUs.svg"
 import aboutUs from "./icons/navbar/aboutUs.svg"
+import instagram from "./icons/footer/instagram.svg"
+import telegram from "./icons/footer/telegram.svg"
+import email from "./icons/footer/email.svg"
 
 // images
 import fullLogo from "./images/fullLogo.webp"
@@ -52,4 +55,7 @@ export {
   cSharpCourse,
   pythonCourse,
   frontEndCourse,
+  instagram,
+  telegram,
+  email,
 }

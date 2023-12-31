@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 import { FaLongArrowAltLeft } from "react-icons/fa"
 
-function Course({ id, title, desc, bgImage, logo, btnColor }) {
+function Course({ id, title, desc, bgImage, logo, btnColor, price }) {
   return (
     <>
       <div
@@ -20,6 +20,14 @@ function Course({ id, title, desc, bgImage, logo, btnColor }) {
             {title}
           </span>
           <span className="text-sm  text-white">{desc}</span>
+          <span className="text-white">
+            هزینه دوره :
+            {price === 0 ? (
+              <span className="mr-2 font-bold">رایگان !</span>
+            ) : (
+              <span className="mr-2 font-bold">{price} تومان</span>
+            )}
+          </span>
         </div>
         <Link
           style={{ backgroundColor: `#${btnColor}` }}

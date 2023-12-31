@@ -17,14 +17,16 @@ function Courses({ courseTitle, btnText, btnLink }) {
       bgImage: bgMainWeb,
       logo: webLogos,
       btnColor: "404D85",
+      price: 0,
     },
     {
       id: 2,
-      title: "آموزش #C مقدماتی",
+      title: "آموزش C# مقدماتی",
       desc: " مدرس : استاد علیرضا اسلامی زاد",
       bgImage: bgMainCSharp,
       logo: cSharp,
       btnColor: "6558FF",
+      price: 0,
     },
     {
       id: 3,
@@ -33,6 +35,7 @@ function Courses({ courseTitle, btnText, btnLink }) {
       bgImage: bgMainPython,
       logo: python,
       btnColor: "4C8ABB",
+      price: "100,000",
     },
   ]
   return (
@@ -46,7 +49,7 @@ function Courses({ courseTitle, btnText, btnLink }) {
         ))}
       </div>
       <button
-        className="mx-auto flex w-fit items-center gap-x-2 rounded-lg bg-[#0062d1] px-4 py-2 font-semibold text-white hover:bg-opacity-70 md:text-xl"
+        className="mx-auto flex w-fit items-center gap-x-2 rounded-lg bg-[#1f6182] px-4 py-2 font-semibold text-white hover:bg-opacity-70 md:text-xl"
         onClick={() => (window.location.href = btnLink)}
       >
         {btnText}
