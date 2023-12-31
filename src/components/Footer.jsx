@@ -26,7 +26,7 @@ function Footer() {
               <Link to="/">صفحه اصلی</Link>
             </li>
             <li className=" hover:text-[#1f6182] ">
-              <Link to="/courses">دوره ها</Link>
+              <Link to="/courses">دوره‌ها</Link>
             </li>
             <li className=" hover:text-[#1f6182] ">
               <Link to="/b">تماس با ما</Link>
@@ -37,7 +37,7 @@ function Footer() {
           </ul>
           <ul className="flex flex-col items-center gap-y-1  text-black ">
             <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
-              جدید ترین دوره ها
+              جدید ترین دوره‌ها
             </li>
             <li className=" hover:text-[#1f6182] ">
               <Link to="/course/1">دوره طراحی وب</Link>
@@ -51,7 +51,7 @@ function Footer() {
           </ul>
           <span className="flex flex-col items-center gap-y-1">
             <span className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
-              راه های ارتباطی
+              راه‌های ارتباطی
             </span>
             <ul className="flex flex-row-reverse items-center  gap-x-2 text-black">
               <li className=" hover:text-[#1f6182] ">

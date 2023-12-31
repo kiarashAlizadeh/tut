@@ -49,7 +49,7 @@ function CourseDetail({
           </Link>
           <MdOutlineNavigateBefore />
           <Link to="/courses" className="hover:text-[#14749d]">
-            دوره ها
+            دوره‌ها
           </Link>
           <MdOutlineNavigateBefore />
           <span className="cursor-default">{title}</span>

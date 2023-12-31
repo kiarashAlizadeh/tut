@@ -17,7 +17,7 @@ function CoursesPage() {
       {isLoading ? <Loader /> : <> </>}
       <Navbar />
       <Courses
-        courseTitle={"دوره های آموزشی"}
+        courseTitle={"دوره‌های آموزشی"}
         btnText={"بیشتر"}
         btnLink={"#"}
       />
