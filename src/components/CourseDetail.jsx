@@ -52,7 +52,9 @@ function CourseDetail({
             دوره‌ها
           </Link>
           <MdOutlineNavigateBefore />
-          <span className="cursor-default">{title}</span>
+          <span className="cursor-default">
+            {title} {level}
+          </span>
         </div>
         <img src={image} alt={title} className="xl:hidden" draggable="false" />
         <div className="  gap-x-20 xl:flex">
@@ -174,7 +176,7 @@ function CourseDetail({
             />
             <div className="mt-5 max-w-[800px]">
               <h1 className="mb-3 font-IRANKharazmi text-2xl font-black">
-                {title}
+                {title} {level}
               </h1>
               <p
                 className="text-justify"
@@ -187,7 +189,7 @@ function CourseDetail({
 
             <div className="mt-10 flex w-full flex-col">
               <h2 class="mb-8 text-center font-IRANKharazmi text-3xl font-bold">
-                {courseDetailsTitle}
+                سرفصل های دوره
               </h2>
               {courseDetails.map((course) => {
                 return (
@@ -324,12 +326,12 @@ function CourseDetail({
           </h2>
 
           {youtube.map((video, index) => (
-            <div className="mb-10">
+            <div className="mb-10 h-[315px] w-full max-w-[560px] rounded-xl px-3 lg:h-[415px] lg:w-[760px]">
               <div className="mb-2 text-xl font-bold">
                 {title} {level} - قسمت {index + 1}:
               </div>
               <iframe
-                className="rounded-xl sm:h-[315px] sm:w-[560px] lg:h-[415px] lg:w-[760px]"
+                className="h-full max-h-[315px] w-full max-w-[560px] rounded-xl lg:h-[415px] lg:w-[760px]"
                 src={video}
                 title="YouTube video player"
                 frameborder="0"
