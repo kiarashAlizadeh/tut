@@ -22,8 +22,8 @@ function Home() {
         <Navbar />
         <Header />
         <Courses
-          courseTitle={"جدیدترین دوره ها"}
-          btnText={"مشاهده تمامی دوره ها"}
+          courseTitle={"جدیدترین دوره‌ها"}
+          btnText={"مشاهده تمامی دوره‌ها"}
           btnLink={"/courses"}
         />
         <Footer />

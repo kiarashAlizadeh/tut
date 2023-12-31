@@ -7,7 +7,7 @@ function Header() {
           src={Header1}
           alt="tut header"
           draggable="false"
-          className="max-h-[600px] w-full select-none"
+          className="w-full select-none"
         />
       </header>
     </>

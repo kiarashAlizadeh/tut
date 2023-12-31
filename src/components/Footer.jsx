@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { fullLogo } from "../assets"
+import { fullLogo, instagram, telegram, email } from "../assets"
 function Footer() {
   return (
     <>
@@ -22,52 +22,58 @@ function Footer() {
             <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
               صفحات
             </li>
-            <li className=" hover:text-[#62b1d8] ">
+            <li className=" hover:text-[#1f6182] ">
               <Link to="/">صفحه اصلی</Link>
             </li>
-            <li className=" hover:text-[#62b1d8] ">
-              <Link to="/courses">دوره ها</Link>
+            <li className=" hover:text-[#1f6182] ">
+              <Link to="/courses">دوره‌ها</Link>
             </li>
-            <li className=" hover:text-[#62b1d8] ">
+            <li className=" hover:text-[#1f6182] ">
               <Link to="/b">تماس با ما</Link>
             </li>
-            <li className=" hover:text-[#62b1d8] ">
+            <li className=" hover:text-[#1f6182] ">
               <Link to="/c">درباره ما</Link>
             </li>
           </ul>
           <ul className="flex flex-col items-center gap-y-1  text-black ">
             <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
-              جدید ترین دوره ها
+              جدید ترین دوره‌ها
             </li>
-            <li className=" hover:text-[#62b1d8] ">
+            <li className=" hover:text-[#1f6182] ">
               <Link to="/course/1">دوره طراحی وب</Link>
             </li>
-            <li className=" hover:text-[#62b1d8] ">
+            <li className=" hover:text-[#1f6182] ">
               <Link to="/course/2">دوره سی شارپ</Link>
             </li>
-            <li className=" hover:text-[#62b1d8] ">
+            <li className=" hover:text-[#1f6182] ">
               <Link to="/course/3">دوره Python</Link>
             </li>
           </ul>
-          <ul className="flex flex-col items-center gap-y-1  text-black">
-            <li className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
-              راه های ارتباطی
-            </li>
-            <li className=" hover:text-[#62b1d8] ">
-              <Link to="mailto:TUT.Learning.77@gmail.com">Email</Link>
-            </li>
-            <li className=" hover:text-[#62b1d8] ">
-              <Link to="https://www.instagram.com/TUT_Learning/">
-                Instagram
-              </Link>
-            </li>
-            <li className=" hover:text-[#62b1d8] ">
-              <Link to="https://t.me/TUT_Learning">Telegram</Link>
-            </li>
-          </ul>
+          <span className="flex flex-col items-center gap-y-1">
+            <span className="mb-1 border-b-2 border-black/80 px-1 pb-1 font-IRANKharazmi text-xl font-bold">
+              راه‌های ارتباطی
+            </span>
+            <ul className="flex flex-row-reverse items-center  gap-x-2 text-black">
+              <li className=" hover:text-[#1f6182] ">
+                <Link to="mailto:TUT.Learning.77@gmail.com">
+                  <img src={email} alt="email" className="h-10 w-10" />
+                </Link>
+              </li>
+              <li className=" hover:text-[#1f6182] ">
+                <Link to="https://t.me/TUT_Learning">
+                  <img src={telegram} alt="telegram" className="h-10 w-10" />
+                </Link>
+              </li>
+              <li className=" hover:text-[#1f6182] ">
+                <Link to="https://www.instagram.com/TUT_Learning">
+                  <img src={instagram} alt="instagram" className="h-10 w-10" />
+                </Link>
+              </li>
+            </ul>
+          </span>
         </div>
         <div className="w-full border-t-2 border-black/70 pt-3 text-center  text-black">
-          <span> کلیه حقوق محفوظ - &copy; ۱۴۰۲ </span>
+          <span>کلیه حقوق این وبسایت متعلق به توت می باشد - &copy; ۱۴۰۲</span>
         </div>
       </footer>
     </>

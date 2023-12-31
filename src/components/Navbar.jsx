@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import { FcAbout } from "react-icons/fc"
 import { FaShoppingCart } from "react-icons/fa"
@@ -10,9 +10,7 @@ import {
   hamburgerMenu,
   close,
   home,
-  bime,
   contactUs,
-  aboutUs,
   Logo,
 } from "../assets"
 
@@ -22,8 +20,8 @@ function Navbar() {
   const isLogin = false
   return (
     <>
-      <nav className="font-IRANKharazmi sticky top-0 z-50 h-[69px] select-none bg-white/95 lg:h-auto">
-        <div className=" hidden justify-between items-center px-10 pb-4 pt-4 text-[#606060] lg:flex xl:px-[108px]">
+      <nav className="sticky top-0 z-50 h-[69px] select-none bg-white/95 font-IRANKharazmi lg:h-auto">
+        <div className=" hidden items-center justify-between px-10 pb-4 pt-4 text-[#606060] lg:flex xl:px-[155px]">
           <img
             src={Logo}
             draggable="false"
@@ -35,7 +33,7 @@ function Navbar() {
               <NavLink to="/"> صفحه اصلی </NavLink>
             </li>
             <li>
-              <NavLink to="/courses">دوره ها</NavLink>
+              <NavLink to="/courses">دوره‌ها</NavLink>
             </li>
             <li>
               <NavLink to="/b">تماس با ما</NavLink>
@@ -92,7 +90,7 @@ function Navbar() {
                 <li>
                   <NavLink to="/courses" className="flex items-center gap-x-2">
                     <FaShoppingCart />
-                    دوره ها
+                    دوره‌ها
                   </NavLink>
                 </li>
                 <li>

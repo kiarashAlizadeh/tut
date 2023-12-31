@@ -21,11 +21,11 @@ body {
 
 /* navlink active */
 .active {
-  @apply  font-bold text-[#1f6182]  lg:hover:text-[#62b1d8] !important;
+  @apply text-[#1f6182] !important;
 }
 
 nav ul li a {
-  @apply lg:hover:text-[#62b1d8];
+  @apply lg:hover:text-[#1f6182];
 }
 
 /* انیمیشن برای نوبار موبایل */
