@@ -22,7 +22,6 @@ function CourseDetail({
   image,
   title,
   desc,
-  courseDetailsTitle,
   courseDetails,
   prerequisite,
   level,
@@ -38,8 +37,8 @@ function CourseDetail({
 }) {
   return (
     <>
-      <div className="mx-auto flex w-fit flex-col items-center justify-between xl:mb-10">
-        <div className="mb-5 mt-3 flex w-[95%] items-center gap-x-2 rounded-lg border-[1px] border-gray-300 px-3  py-2 text-lg font-bold text-gray-500 xl:mt-0 xl:w-full">
+      <div className="mx-auto flex w-fit flex-col items-center justify-between pt-5 xl:mb-10">
+        <div className="mb-5 flex w-[95%] items-center gap-x-2 rounded-lg bg-white px-3  py-2 text-sm font-bold text-gray-500 shadow-md sm:text-lg xl:mt-0 xl:w-full">
           <Link
             to="/"
             className="flex items-center gap-x-2 hover:text-[#14749d]"
@@ -59,12 +58,12 @@ function CourseDetail({
         <img src={image} alt={title} className="xl:hidden" draggable="false" />
         <div className="  gap-x-20 xl:flex">
           <div className="flex flex-col items-center">
-            <div class="mx-auto hidden w-fit select-none rounded-xl border-2 border-black px-4 py-4 text-xl xl:block">
+            <div class="mx-auto hidden w-fit select-none rounded-xl px-4 py-4 text-xl xl:block">
               <h3 className="mb-4 text-center font-IRANKharazmi text-3xl font-black">
                 جزئیات دوره
               </h3>
               <div className="flex flex-col gap-y-4">
-                <span className="flex gap-x-2">
+                <span className="flex  w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <MdLibraryBooks />
@@ -73,7 +72,7 @@ function CourseDetail({
                   </b>
                   <span className="text-[#2f6177]">{level}</span>
                 </span>
-                <span className="flex gap-x-2">
+                <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <MdOutlineEdit />
@@ -82,7 +81,7 @@ function CourseDetail({
                   </b>
                   <span className="text-[#2f6177]">{prerequisite}</span>
                 </span>
-                <span className="flex gap-x-2">
+                <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <IoTime />
@@ -91,7 +90,7 @@ function CourseDetail({
                   </b>
                   <span className="text-[#2f6177]">{courseTime} ساعت</span>
                 </span>
-                <span className="flex gap-x-2">
+                <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <LiaChalkboardTeacherSolid />
@@ -100,7 +99,7 @@ function CourseDetail({
                   </b>
                   <span className="text-[#2f6177]">{teacher}</span>
                 </span>
-                <span className="flex gap-x-2">
+                <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <IoLocationSharp />
@@ -109,7 +108,7 @@ function CourseDetail({
                   </b>
                   <span className="text-[#2f6177]">{place}</span>
                 </span>
-                <span className="flex gap-x-2">
+                <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <FaCheckCircle />
@@ -118,7 +117,7 @@ function CourseDetail({
                   </b>
                   <span className="text-[#2f6177]">{status}</span>
                 </span>
-                <span className="flex gap-x-2">
+                <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <BsCalendarDateFill />
@@ -127,7 +126,7 @@ function CourseDetail({
                   </b>
                   <span className="text-[#2f6177]">{date}</span>
                 </span>
-                <span className="flex gap-x-2">
+                <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-md">
                   <b className="flex items-center gap-x-2 text-gray-500">
                     <span className="text-[#14749e]">
                       <FaDollarSign />
@@ -149,7 +148,7 @@ function CourseDetail({
 
             {enabled ? (
               <button
-                className="my-10 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
+                className="mt-3 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
                 onClick={() => {
                   window.location.href = link
                 }}
@@ -159,7 +158,7 @@ function CourseDetail({
               </button>
             ) : (
               <button
-                className="my-10 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:flex"
+                className="mt-3 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:flex"
                 disabled="true"
               >
                 <PiStudentFill />
@@ -167,14 +166,15 @@ function CourseDetail({
               </button>
             )}
           </div>
-          <div className="flex flex-col flex-wrap items-center gap-y-5 px-5 xl:px-0">
+          <div className="flex flex-col flex-wrap items-center px-5 xl:px-0">
             <img
               src={image}
               alt={title}
               className="hidden xl:block xl:max-h-[450px] xl:max-w-[800px] xl:rounded-xl"
               draggable="false"
             />
-            <div className="mt-5 max-w-[800px]">
+
+            <div className="mt-5 max-w-[800px] rounded-b-lg bg-white px-5 py-5 shadow-lg">
               <h1 className="mb-3 font-IRANKharazmi text-2xl font-black">
                 {title} {level}
               </h1>
@@ -216,12 +216,12 @@ function CourseDetail({
             </div>
           </div>
         </div>
-        <div class="mx-auto mt-10 w-fit select-none rounded-xl border-2 border-black px-4 py-4 xl:hidden">
+        <div class="mx-auto mt-10 w-fit select-none rounded-xl px-4 py-4 xl:hidden">
           <h3 className="mb-4 text-center font-IRANKharazmi text-2xl font-black">
             جزئیات دوره
           </h3>
           <div className="flex flex-col gap-y-4">
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <MdLibraryBooks />
@@ -230,7 +230,7 @@ function CourseDetail({
               </b>
               <span className="text-[#2f6177]">{level}</span>
             </span>
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <MdOutlineEdit />
@@ -239,7 +239,7 @@ function CourseDetail({
               </b>
               <span className="text-[#2f6177]">{prerequisite}</span>
             </span>
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <IoTime />
@@ -248,7 +248,7 @@ function CourseDetail({
               </b>
               <span className="text-[#2f6177]">{courseTime} ساعت</span>
             </span>
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <LiaChalkboardTeacherSolid />
@@ -257,7 +257,7 @@ function CourseDetail({
               </b>
               <span className="text-[#2f6177]">{teacher}</span>
             </span>
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <IoLocationSharp />
@@ -266,7 +266,7 @@ function CourseDetail({
               </b>
               <span className="text-[#2f6177]">{place}</span>
             </span>
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <FaCheckCircle />
@@ -275,7 +275,7 @@ function CourseDetail({
               </b>
               <span className="text-[#2f6177]">{status}</span>
             </span>
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <BsCalendarDateFill />
@@ -284,7 +284,7 @@ function CourseDetail({
               </b>
               <span className="text-[#2f6177]">{date}</span>
             </span>
-            <span className="flex gap-x-2">
+            <span className="flex w-full gap-x-2 rounded-lg bg-[#fff] px-2 py-2 shadow-lg">
               <b className="flex items-center gap-x-2 text-gray-500">
                 <span className="text-[#14749e]">
                   <FaDollarSign />
@@ -301,7 +301,7 @@ function CourseDetail({
         </div>
         {enabled ? (
           <button
-            className="my-10 flex w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
+            className=" mt-3 flex w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
             onClick={() => {
               window.location.href = link
             }}
@@ -311,7 +311,7 @@ function CourseDetail({
           </button>
         ) : (
           <button
-            className="my-10 flex w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:hidden"
+            className="mt-3 flex w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:hidden"
             disabled="true"
           >
             <PiStudentFill />
@@ -320,18 +320,18 @@ function CourseDetail({
         )}
       </div>
       {youtube ? (
-        <div className="mt-16 flex w-full flex-col items-center">
+        <div className="mt-16 flex w-full flex-col items-center px-2">
           <h2 className="mb-5 text-center font-IRANKharazmi text-2xl font-black">
             فیلم های ضبط شده {title} {level}
           </h2>
 
           {youtube.map((video, index) => (
-            <div className="mb-20 h-[315px] w-full max-w-[560px] rounded-xl px-3 lg:h-[415px] lg:w-[760px]">
+            <div className="mb-10 h-full min-h-[275px] w-full max-w-[560px]  rounded-lg bg-white p-5 px-5 shadow-lg lg:w-[760px] lg:shadow-md">
               <div className="mb-2 text-xl font-bold">
                 {title} {level} - قسمت {index + 1}:
               </div>
               <iframe
-                className="h-full w-full rounded-xl"
+                className="min-h-[275px] w-full rounded-xl"
                 src={video}
                 title="YouTube video player"
                 frameborder="0"

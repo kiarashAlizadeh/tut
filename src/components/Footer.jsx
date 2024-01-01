@@ -73,7 +73,9 @@ function Footer() {
           </span>
         </div>
         <div className="w-full border-t-2 border-black/70 pt-3 text-center  text-black">
-          <span>کلیه حقوق این وبسایت متعلق به مجموعه توت می باشد - &copy; ۱۴۰۲</span>
+          <span>
+            کلیه حقوق این وبسایت متعلق به مجموعه توت می باشد - &copy; ۱۴۰۲
+          </span>
         </div>
       </footer>
     </>

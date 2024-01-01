@@ -16,7 +16,7 @@
 /* styles */
 body {
   /* @apply bg-[#1e1f26] text-white; */
-  @apply bg-white font-BMitra text-black;
+  @apply bg-[#f4f6f8] font-BMitra text-black;
 }
 
 /* navlink active */
