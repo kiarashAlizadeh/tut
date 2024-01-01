@@ -1,3 +1,6 @@
+import courses from "../db"
+import { Link } from "react-router-dom"
+
 // material ui
 import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
@@ -16,25 +19,26 @@ import { BsCalendarDateFill } from "react-icons/bs"
 import { PiStudentFill } from "react-icons/pi"
 import { MdLibraryBooks } from "react-icons/md"
 import { FaCheckCircle } from "react-icons/fa"
-import { Link } from "react-router-dom"
 
-function CourseDetail({
-  title,
-  level,
-  courseImage,
-  prerequisite,
-  courseTime,
-  teacher,
-  place,
-  date,
-  price,
-  status,
-  formLink,
-  courseBtnEnabled,
-  youtubeLinks,
-  courseDesc,
-  courseDetails,
-}) {
+function CourseDetail({ id }) {
+  const {
+    title,
+    level,
+    courseImage,
+    prerequisite,
+    courseTime,
+    teacher,
+    place,
+    date,
+    price,
+    status,
+    formLink,
+    courseBtnEnabled,
+    youtubeLinks,
+    courseDesc,
+    courseDetails,
+  } = courses.find((course) => course.id === id)
+
   return (
     <>
       <div className="mx-auto flex w-fit flex-col items-center justify-between pt-5 xl:mb-10">
