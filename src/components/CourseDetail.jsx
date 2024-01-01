@@ -8,17 +8,16 @@ import AccordionDetails from "@mui/material/AccordionDetails"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 // react icons
-import { MdOutlineNavigateBefore } from "react-icons/md"
-import { FaHome } from "react-icons/fa"
-import { MdOutlineEdit } from "react-icons/md"
-import { IoTime } from "react-icons/io5"
+import { FaHome, FaDollarSign, FaCheckCircle } from "react-icons/fa"
+import {
+  MdOutlineNavigateBefore,
+  MdOutlineEdit,
+  MdLibraryBooks,
+} from "react-icons/md"
+import { IoTime, IoLocationSharp } from "react-icons/io5"
 import { LiaChalkboardTeacherSolid } from "react-icons/lia"
-import { FaDollarSign } from "react-icons/fa"
-import { IoLocationSharp } from "react-icons/io5"
 import { BsCalendarDateFill } from "react-icons/bs"
 import { PiStudentFill } from "react-icons/pi"
-import { MdLibraryBooks } from "react-icons/md"
-import { FaCheckCircle } from "react-icons/fa"
 
 function CourseDetail({ id }) {
   const {
