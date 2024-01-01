@@ -2,7 +2,16 @@ import { Link } from "react-router-dom"
 
 import { FaLongArrowAltLeft } from "react-icons/fa"
 
-function Course({ id, title, desc, bgImage, logo, btnColor, price }) {
+function Course({
+  id,
+  title,
+  level,
+  cardDesc,
+  bgImage,
+  cardLogo,
+  btnColor,
+  price,
+}) {
   return (
     <>
       <div
@@ -14,12 +23,12 @@ function Course({ id, title, desc, bgImage, logo, btnColor, price }) {
           backgroundSize: "cover",
         }}
       >
-        <img src={logo} className="z-10" alt={`${logo}`} />
+        <img src={cardLogo} className="z-10" alt={`${cardLogo}`} />
         <div className="flex flex-col items-center gap-y-3">
           <span className="font-IRANKharazmi text-xl font-bold text-white">
-            {title}
+            {title} {level}
           </span>
-          <span className="text-sm  text-white">{desc}</span>
+          <span className="text-sm  text-white">{cardDesc}</span>
           <span className="text-white">
             هزینه دوره :
             {price === 0 ? (

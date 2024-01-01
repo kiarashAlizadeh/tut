@@ -64,8 +64,8 @@ const SunspotLoader = ({
 
   useEffect(() => {
     let select = (s) => document.querySelector(s),
-      selectAll = (s) => document.querySelectorAll(s),
-      mainSVG = select("#mainSVG"),
+      // selectAll = (s) => document.querySelectorAll(s),
+      // mainSVG = select("#mainSVG"),
       container = select("#container"),
       seg = select(".seg"),
       allSegs = []

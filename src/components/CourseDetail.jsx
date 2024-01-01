@@ -19,21 +19,21 @@ import { FaCheckCircle } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 function CourseDetail({
-  image,
   title,
-  desc,
-  courseDetails,
-  prerequisite,
   level,
-  status,
+  courseImage,
+  prerequisite,
   courseTime,
   teacher,
   place,
   date,
-  link,
   price,
-  enabled,
-  youtube,
+  status,
+  formLink,
+  courseBtnEnabled,
+  youtubeLinks,
+  courseDesc,
+  courseDetails,
 }) {
   return (
     <>
@@ -55,7 +55,12 @@ function CourseDetail({
             {title} {level}
           </span>
         </div>
-        <img src={image} alt={title} className="xl:hidden" draggable="false" />
+        <img
+          src={courseImage}
+          alt={title}
+          className="xl:hidden"
+          draggable="false"
+        />
         <div className="  gap-x-20 xl:flex">
           <div className="flex flex-col items-center">
             <div class="mx-auto hidden w-fit select-none rounded-xl px-4 py-4 text-xl xl:block">
@@ -146,11 +151,11 @@ function CourseDetail({
               </div>
             </div>
 
-            {enabled ? (
+            {courseBtnEnabled ? (
               <button
                 className="mt-3 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
                 onClick={() => {
-                  window.location.href = link
+                  window.location.href = formLink
                 }}
               >
                 <PiStudentFill />
@@ -168,7 +173,7 @@ function CourseDetail({
           </div>
           <div className="flex flex-col flex-wrap items-center px-5 xl:px-0">
             <img
-              src={image}
+              src={courseImage}
               alt={title}
               className="hidden xl:block xl:max-h-[450px] xl:max-w-[800px] xl:rounded-xl"
               draggable="false"
@@ -183,7 +188,7 @@ function CourseDetail({
                 dir="rtl"
                 style={{ whiteSpace: "pre-wrap" }}
               >
-                {desc}
+                {courseDesc}
               </p>
             </div>
 
@@ -299,11 +304,11 @@ function CourseDetail({
             </span>
           </div>
         </div>
-        {enabled ? (
+        {courseBtnEnabled ? (
           <button
             className=" mt-3 flex w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
             onClick={() => {
-              window.location.href = link
+              window.location.href = formLink
             }}
           >
             <PiStudentFill />
@@ -319,13 +324,13 @@ function CourseDetail({
           </button>
         )}
       </div>
-      {youtube ? (
+      {youtubeLinks ? (
         <div className="mt-16 flex w-full flex-col items-center px-2">
           <h2 className="mb-5 text-center font-IRANKharazmi text-2xl font-black">
             فیلم های ضبط شده {title} {level}
           </h2>
 
-          {youtube.map((video, index) => (
+          {youtubeLinks.map((video, index) => (
             <div className="mb-10 h-full min-h-[275px] w-full max-w-[560px]  rounded-lg bg-white p-5 px-5 shadow-lg lg:w-[760px] lg:shadow-md">
               <div className="mb-2 text-xl font-bold">
                 {title} {level} - قسمت {index + 1}:
