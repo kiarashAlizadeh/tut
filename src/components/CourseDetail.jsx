@@ -326,12 +326,12 @@ function CourseDetail({
           </h2>
 
           {youtube.map((video, index) => (
-            <div className="mb-10 h-[315px] w-full max-w-[560px] rounded-xl px-3 lg:h-[415px] lg:w-[760px]">
+            <div className="mb-20 h-[315px] w-full max-w-[560px] rounded-xl px-3 lg:h-[415px] lg:w-[760px]">
               <div className="mb-2 text-xl font-bold">
                 {title} {level} - قسمت {index + 1}:
               </div>
               <iframe
-                className="h-full max-h-[315px] w-full max-w-[560px] rounded-xl lg:h-[415px] lg:w-[760px]"
+                className="h-full w-full rounded-xl"
                 src={video}
                 title="YouTube video player"
                 frameborder="0"
