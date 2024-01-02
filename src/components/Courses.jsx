@@ -2,6 +2,11 @@ import courses from "../db"
 import Course from "./Course"
 
 function Courses({ courseTitle, btnText, btnLink }) {
+  // onclick handler
+  const BtnHandler = () => {
+    window.location.href = btnLink
+  }
+
   return (
     <>
       <h1 className="mx-auto mb-5 mt-10 w-fit font-IRANKharazmi text-3xl font-bold text-black lg:text-4xl">
@@ -14,7 +19,7 @@ function Courses({ courseTitle, btnText, btnLink }) {
       </div>
       <button
         className="mx-auto flex w-fit items-center gap-x-2 rounded-lg bg-[#1f6182] px-4 py-2 font-semibold text-white hover:bg-opacity-70 md:text-xl"
-        onClick={() => (window.location.href = btnLink)}
+        onClick={BtnHandler}
       >
         {btnText}
       </button>

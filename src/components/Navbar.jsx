@@ -18,6 +18,12 @@ function Navbar() {
   const [resNavbar, setResNavbar] = useState(false)
 
   const isLogin = false
+
+  // btn handler
+  const BtnHandler = () => {
+    setResNavbar((prev) => !prev)
+  }
+
   return (
     <>
       <nav className="sticky top-0 z-50 h-[69px] select-none bg-white/95 font-IRANKharazmi lg:h-auto">
@@ -43,41 +49,27 @@ function Navbar() {
             </li>
           </ul>
 
-          <button
-            //   onClick={(e) => setReqLogin(true)}
-            className="flex w-fit items-center gap-x-2 rounded-lg bg-[#095373] px-4 py-2 text-white hover:bg-opacity-75"
-          >
+          <button className="flex w-fit items-center gap-x-2 rounded-lg bg-[#095373] px-4 py-2 text-white hover:bg-opacity-75">
             <img draggable="false" src={person} alt="person" />
             ورود/ ثبت نام
           </button>
         </div>
         {/* responsive for mobile */}
         <div className=" flex items-center justify-between px-5 py-4 lg:hidden">
-          <img
-            src={hamburgerMenu}
-            alt="hamburgerMenu"
-            onClick={() => setResNavbar((prev) => !prev)}
-          />
+          <img src={hamburgerMenu} alt="hamburgerMenu" onClick={BtnHandler} />
           <img src={Logo} draggable="false" alt="bilito" className="w-28" />
-          <button
-            className="rounded-full bg-[#095373] p-2"
-            //   onClick={(e) => setReqLogin(true)}
-          >
+          <button className="rounded-full bg-[#095373] p-2">
             <img src={person} alt="person" />
           </button>
           {/* main responsive menu */}
           <div class={` ${resNavbar ? "flex" : "hidden"}  relative z-50`}>
             <div
               class=" fixed inset-0 bg-gray-800 opacity-40"
-              onClick={() => setResNavbar((prev) => !prev)}
+              onClick={BtnHandler}
             ></div>
             <nav className="navbar-menu fixed bottom-0 right-0 top-0 flex w-full max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6">
               <div className="mb-14 flex justify-between">
-                <img
-                  src={close}
-                  alt="close"
-                  onClick={() => setResNavbar((prev) => !prev)}
-                />
+                <img src={close} alt="close" onClick={BtnHandler} />
                 <img src={Logo} alt="bimito" className="mx-auto w-32" />
               </div>
               <ul className="mb-12 flex flex-col gap-y-8 text-sm text-[#404040]">
@@ -115,10 +107,7 @@ function Navbar() {
                 )}
               </ul>
               {!isLogin && (
-                <button
-                  //   onClick={(e) => setReqLogin(true)}
-                  className="flex w-full items-center justify-center gap-x-2 rounded-lg bg-[#095373] px-4 py-3 text-white hover:bg-cyan-200"
-                >
+                <button className="flex w-full items-center justify-center gap-x-2 rounded-lg bg-[#095373] px-4 py-3 text-white hover:bg-cyan-200">
                   <img draggable="false" src={person} alt="person" />
                   ورود/ ثبت نام
                 </button>

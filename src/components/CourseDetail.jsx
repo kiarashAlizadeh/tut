@@ -44,11 +44,15 @@ function CourseDetail({ id }) {
   const [expanded, setExpanded] = useState(
     Array(courseDetails.length).fill(false)
   )
-
   const handleChange = (panel) => (event, isExpanded) => {
     const newExpanded = [...expanded]
     newExpanded[panel] = isExpanded
     setExpanded(newExpanded)
+  }
+
+  // onclick handler
+  const submitBtnHandler = () => {
+    window.location.href = formLink
   }
 
   return (
@@ -170,9 +174,7 @@ function CourseDetail({ id }) {
             {courseBtnEnabled ? (
               <button
                 className="mt-3 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:flex"
-                onClick={() => {
-                  window.location.href = formLink
-                }}
+                onClick={submitBtnHandler}
               >
                 <PiStudentFill />
                 ثبت نام در دوره
@@ -328,9 +330,7 @@ function CourseDetail({ id }) {
         {courseBtnEnabled ? (
           <button
             className=" mt-3 flex w-fit select-none items-center gap-x-2 rounded-lg bg-[#14749e] px-4 py-2 text-center text-xl text-white hover:bg-opacity-70 xl:hidden"
-            onClick={() => {
-              window.location.href = formLink
-            }}
+            onClick={submitBtnHandler}
           >
             <PiStudentFill />
             ثبت نام در دوره
@@ -363,7 +363,7 @@ function CourseDetail({ id }) {
                 className="min-h-[275px] w-full rounded-xl"
                 src={video}
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>

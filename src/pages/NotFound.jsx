@@ -18,6 +18,12 @@ function NotFound() {
       setIsLoading(false)
     }, 1000)
   }, [])
+
+  // btn handler
+  const BtnHandler = () => {
+    window.location.href = "/"
+  }
+
   return (
     <>
       {isLoading ? <Loader /> : <> </>}
@@ -39,7 +45,7 @@ function NotFound() {
         </div>
         <button
           className="flex items-center gap-x-2 rounded-lg bg-[#0062d1] px-4 py-2 font-semibold text-white hover:bg-opacity-70 md:text-xl"
-          onClick={() => (window.location.href = "/")}
+          onClick={BtnHandler}
         >
           <FaHome />
           بازگشت به صفحه اصلی

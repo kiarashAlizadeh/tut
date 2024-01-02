@@ -114,7 +114,7 @@ const courses = [
     price: 0,
     status: "در حال ثبت نام",
     formLink: `https://docs.google.com/forms/d/e/1FAIpQLSe1J8ZoX9NJhvTxbkl24rcTo0z8jJsW0RD8L97ah8ET0ZUSyQ/viewform?usp=sf_link`,
-    enabled: true,
+    courseBtnEnabled: true,
     youtubeLinks: [
       "https://www.youtube.com/embed/J0FhV3dM80o?si=QF4DIENGreRPdSNq",
       "https://www.youtube.com/embed/hnjly9iBHso?si=KNOFquSAZR0M6tZo",
@@ -176,7 +176,7 @@ const courses = [
     status: "در حال ثبت نام",
     formLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSd2cPRv8q5TWijR7uOlJvNANmd8omFt1rhNeEiKjmWAjaiUUg/viewform?usp=sf_link",
-    enabled: true,
+    courseBtnEnabled: true,
     youtubeLinks: [
       "https://www.youtube.com/embed/oxXAb8IikHM?si=qGiSIRtW39bxmcd8",
       "https://www.youtube.com/embed/oxXAb8IikHM?si=xeQXYcHmMyPO2UHu",

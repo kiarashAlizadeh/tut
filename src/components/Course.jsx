@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 import { FaLongArrowAltLeft } from "react-icons/fa"
 
 function Course({
@@ -12,6 +10,11 @@ function Course({
   btnColor,
   price,
 }) {
+  // btn handler
+  const submitBtnHandler = () => {
+    window.location.href = `/course/${id}`
+  }
+
   return (
     <>
       <div
@@ -38,19 +41,10 @@ function Course({
             )}
           </span>
         </div>
-        {/* <Link
-          style={{ backgroundColor: `#${btnColor}` }}
-          className="courseBtn mx-auto flex  w-fit flex-row-reverse items-center gap-x-1 rounded-xl px-4 py-2 text-xl font-bold text-white"
-          to={`/course/${id}`}
-        >
-          <FaLongArrowAltLeft /> جزئیات دوره
-        </Link> */}
         <button
           style={{ backgroundColor: `#${btnColor}` }}
           className="courseBtn mx-auto flex  w-fit flex-row-reverse items-center gap-x-1 rounded-xl px-4 py-2 text-xl font-bold text-white"
-          onClick={() => {
-            window.location.href = `/course/${id}`
-          }}
+          onClick={submitBtnHandler}
         >
           <FaLongArrowAltLeft /> جزئیات دوره
         </button>
