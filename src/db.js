@@ -25,11 +25,12 @@ const courses = [
     courseTime: 23,
     teacher: "دکتر علیرضا اسلامی زاد",
     place: "آنلاین - اسکایپ",
-    date: "1402/12/09",
-    price: "1,000,000",
-    status: "در حال برگزاری",
-    formLink: "https://docs.google.com/forms",
-    courseBtnEnabled: false,
+    date: "1403/01/01",
+    price: 0,
+    status: "در حال ثبت نام",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdEL33x6YRc1SQb6mLM89bWHeuLqQMSSMs4fHWco8fmEPogDg/viewform?usp=sf_link",
+    courseBtnEnabled: true,
     youtubeLinks: "",
     courseDesc: ` طراحی وبسایت و بخش فرانت‌اند به عنوان یکی از مهمترین جنبه‌های توسعه وب، به طراحی، ساخت و اجرای رابط کاربری یک وبسایت می‌پردازد. HTML، CSS و JavaScript به عنوان سه عنصر اصلی در این فرآیند مطرح هستند. 
   
@@ -109,10 +110,10 @@ const courses = [
     courseTime: 10,
     teacher: "دکتر علیرضا اسلامی زاد",
     place: "آنلاین - اسکایپ",
-    date: "1402/12/09",
+    date: "1403/01/01",
     price: 0,
     status: "در حال ثبت نام",
-    formLink: `https://docs.google.com/forms`,
+    formLink: `https://docs.google.com/forms/d/e/1FAIpQLSe1J8ZoX9NJhvTxbkl24rcTo0z8jJsW0RD8L97ah8ET0ZUSyQ/viewform?usp=sf_link`,
     enabled: true,
     youtubeLinks: [
       "https://www.youtube.com/embed/J0FhV3dM80o?si=QF4DIENGreRPdSNq",
@@ -170,11 +171,12 @@ const courses = [
     courseTime: 16,
     teacher: "دکتر علیرضا اسلامی زاد",
     place: "آنلاین - اسکایپ",
-    date: "1402/12/09",
-    price: "500,000",
-    status: "اتمام دوره",
-    formLink: "https://docs.google.com/forms",
-    enabled: false,
+    date: "1403/01/01",
+    price: 0,
+    status: "در حال ثبت نام",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd2cPRv8q5TWijR7uOlJvNANmd8omFt1rhNeEiKjmWAjaiUUg/viewform?usp=sf_link",
+    enabled: true,
     youtubeLinks: [
       "https://www.youtube.com/embed/oxXAb8IikHM?si=qGiSIRtW39bxmcd8",
       "https://www.youtube.com/embed/oxXAb8IikHM?si=xeQXYcHmMyPO2UHu",

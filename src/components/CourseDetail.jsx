@@ -1,4 +1,5 @@
 import courses from "../db"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 // material ui
@@ -18,6 +19,7 @@ import { IoTime, IoLocationSharp } from "react-icons/io5"
 import { LiaChalkboardTeacherSolid } from "react-icons/lia"
 import { BsCalendarDateFill } from "react-icons/bs"
 import { PiStudentFill } from "react-icons/pi"
+import { RiFileList3Line } from "react-icons/ri"
 
 function CourseDetail({ id }) {
   const {
@@ -37,6 +39,17 @@ function CourseDetail({ id }) {
     courseDesc,
     courseDetails,
   } = courses.find((course) => course.id === id)
+
+  // accordion style changer
+  const [expanded, setExpanded] = useState(
+    Array(courseDetails.length).fill(false)
+  )
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    const newExpanded = [...expanded]
+    newExpanded[panel] = isExpanded
+    setExpanded(newExpanded)
+  }
 
   return (
     <>
@@ -182,7 +195,7 @@ function CourseDetail({ id }) {
               draggable="false"
             />
 
-            <div className="mt-5 max-w-[800px] rounded-b-lg bg-white px-5 py-5 shadow-lg">
+            <div className="mt-5 max-w-[800px] rounded-lg bg-white px-5 py-5 shadow-lg">
               <h1 className="mb-3 font-IRANKharazmi text-2xl font-black">
                 {title} {level}
               </h1>
@@ -199,28 +212,33 @@ function CourseDetail({ id }) {
               <h2 class="mb-8 text-center font-IRANKharazmi text-3xl font-bold">
                 سرفصل های دوره
               </h2>
-              {courseDetails.map((course) => {
-                return (
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      <div className="font-black lg:text-2xl">
-                        {course.title}
-                      </div>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <ul class="ml-4 list-inside list-disc">
-                        {course.details.map((detail) => (
-                          <li>{detail}</li>
-                        ))}
-                      </ul>
-                    </AccordionDetails>
-                  </Accordion>
-                )
-              })}
+              {courseDetails.map((course, index) => (
+                <Accordion
+                  key={index}
+                  expanded={expanded[index]}
+                  onChange={handleChange(index)}
+                  className={`${
+                    expanded[index] ? "border-2 border-[#15759eb8]" : ""
+                  }`}
+                >
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls={`panel${index}a-content`}
+                    id={`panel${index}a-header`}
+                  >
+                    <div className="flex items-center gap-x-2 font-black lg:text-2xl">
+                      <RiFileList3Line /> {course.title}
+                    </div>
+                  </AccordionSummary>
+                  <AccordionDetails className="border-t-2 border-dashed border-gray-400">
+                    <ul className="ml-4 list-inside list-disc">
+                      {course.details.map((detail, detailIndex) => (
+                        <li key={detailIndex}>{detail}</li>
+                      ))}
+                    </ul>
+                  </AccordionDetails>
+                </Accordion>
+              ))}
             </div>
           </div>
         </div>
@@ -334,7 +352,10 @@ function CourseDetail({ id }) {
           </h2>
 
           {youtubeLinks.map((video, index) => (
-            <div className="mb-10 h-full min-h-[275px] w-full max-w-[560px]  rounded-lg bg-white p-5 px-5 shadow-lg lg:w-[760px] lg:shadow-md">
+            <div
+              key={index}
+              className="mb-10 h-full min-h-[275px] w-full max-w-[560px]  rounded-lg bg-white p-5 px-5 shadow-lg lg:w-[760px] lg:shadow-md"
+            >
               <div className="mb-2 text-xl font-bold">
                 {title} {level} - قسمت {index + 1}:
               </div>

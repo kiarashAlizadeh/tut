@@ -38,13 +38,22 @@ function Course({
             )}
           </span>
         </div>
-        <Link
+        {/* <Link
           style={{ backgroundColor: `#${btnColor}` }}
           className="courseBtn mx-auto flex  w-fit flex-row-reverse items-center gap-x-1 rounded-xl px-4 py-2 text-xl font-bold text-white"
           to={`/course/${id}`}
         >
           <FaLongArrowAltLeft /> جزئیات دوره
-        </Link>
+        </Link> */}
+        <button
+          style={{ backgroundColor: `#${btnColor}` }}
+          className="courseBtn mx-auto flex  w-fit flex-row-reverse items-center gap-x-1 rounded-xl px-4 py-2 text-xl font-bold text-white"
+          onClick={() => {
+            window.location.href = `/course/${id}`
+          }}
+        >
+          <FaLongArrowAltLeft /> جزئیات دوره
+        </button>
       </div>
     </>
   )
