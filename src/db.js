@@ -111,7 +111,7 @@ const courses = [
     teacher: "دکتر علیرضا اسلامی زاد",
     place: "آنلاین - اسکایپ",
     date: "1403/01/01",
-    price: 0,
+    price: "100,000",
     status: "در حال ثبت نام",
     formLink: `https://docs.google.com/forms/d/e/1FAIpQLSe1J8ZoX9NJhvTxbkl24rcTo0z8jJsW0RD8L97ah8ET0ZUSyQ/viewform?usp=sf_link`,
     courseBtnEnabled: true,
@@ -172,11 +172,11 @@ const courses = [
     teacher: "دکتر علیرضا اسلامی زاد",
     place: "آنلاین - اسکایپ",
     date: "1403/01/01",
-    price: 0,
-    status: "در حال ثبت نام",
+    price: "500,000",
+    status: "پایان ثبت نام",
     formLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSd2cPRv8q5TWijR7uOlJvNANmd8omFt1rhNeEiKjmWAjaiUUg/viewform?usp=sf_link",
-    courseBtnEnabled: true,
+    courseBtnEnabled: false,
     youtubeLinks: [
       "https://www.youtube.com/embed/oxXAb8IikHM?si=qGiSIRtW39bxmcd8",
       "https://www.youtube.com/embed/oxXAb8IikHM?si=xeQXYcHmMyPO2UHu",

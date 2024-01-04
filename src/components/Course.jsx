@@ -1,4 +1,5 @@
 import { FaLongArrowAltLeft } from "react-icons/fa"
+import { FaCheckCircle } from "react-icons/fa"
 
 function Course({
   id,
@@ -9,6 +10,7 @@ function Course({
   cardLogo,
   btnColor,
   price,
+  status,
 }) {
   // btn handler
   const submitBtnHandler = () => {
@@ -27,19 +29,27 @@ function Course({
         }}
       >
         <img src={cardLogo} className="z-10" alt={`${cardLogo}`} />
-        <div className="flex flex-col items-center gap-y-3">
+        <div className="flex flex-col items-center gap-y-6">
           <span className="font-IRANKharazmi text-xl font-bold text-white">
             {title} {level}
           </span>
-          <span className="text-sm  text-white">{cardDesc}</span>
-          <span className="text-white">
-            هزینه دوره :
-            {price === 0 ? (
-              <span className="mr-2 font-bold">رایگان !</span>
-            ) : (
-              <span className="mr-2 font-bold">{price} تومان</span>
-            )}
-          </span>
+          <div className="flex flex-col items-start gap-y-2">
+            <span className="text-sm  text-white">{cardDesc}</span>
+            <span className="text-white">
+              هزینه دوره :
+              {price === 0 ? (
+                <span className="mr-2 text-xl font-black text-red-700">
+                  رایگان !
+                </span>
+              ) : (
+                <span className="mr-2 font-bold">{price} تومان</span>
+              )}
+            </span>
+            <span className="flex gap-x-2 text-white">
+              <b className="flex items-center gap-x-2 ">وضعیت دوره :</b>
+              <span className="">{status}</span>
+            </span>
+          </div>
         </div>
         <button
           style={{ backgroundColor: `#${btnColor}` }}

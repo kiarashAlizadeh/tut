@@ -20,6 +20,7 @@ import { LiaChalkboardTeacherSolid } from "react-icons/lia"
 import { BsCalendarDateFill } from "react-icons/bs"
 import { PiStudentFill } from "react-icons/pi"
 import { RiFileList3Line } from "react-icons/ri"
+import { IoMdInformationCircle } from "react-icons/io"
 
 function CourseDetail({ id }) {
   const {
@@ -180,13 +181,21 @@ function CourseDetail({ id }) {
                 ثبت نام در دوره
               </button>
             ) : (
-              <button
-                className="mt-3 hidden w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:flex"
-                disabled="true"
-              >
-                <PiStudentFill />
-                پایان ثبت نام
-              </button>
+              <div className="hidden flex-col items-center gap-y-5 px-5 xl:flex">
+                <button
+                  className="mt-3 flex w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600"
+                  disabled="true"
+                >
+                  <PiStudentFill />
+                  پایان ثبت نام
+                </button>
+                <div class="flex w-full items-center gap-x-2 rounded-lg bg-[#fff] px-2 py-2 text-[#2f6177] shadow-lg ">
+                  <span className="text-[#14749e]">
+                    <IoMdInformationCircle />
+                  </span>
+                  دوره رایگان بعدی در صفحه اینستاگرام اطلاع رسانی خواهد شد.
+                </div>
+              </div>
             )}
           </div>
           <div className="flex flex-col flex-wrap items-center px-5 xl:px-0">
@@ -336,13 +345,21 @@ function CourseDetail({ id }) {
             ثبت نام در دوره
           </button>
         ) : (
-          <button
-            className="mt-3 flex w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600 xl:hidden"
-            disabled="true"
-          >
-            <PiStudentFill />
-            پایان ثبت نام
-          </button>
+          <div className="flex flex-col items-center gap-y-5 px-5 xl:hidden">
+            <button
+              className="mt-3 flex w-fit select-none items-center gap-x-2 rounded-lg bg-slate-300 px-4 py-2 text-center text-xl text-gray-600"
+              disabled="true"
+            >
+              <PiStudentFill />
+              پایان ثبت نام
+            </button>
+            <div class="flex w-full items-center gap-x-2 rounded-lg bg-[#fff] px-2 py-2 text-[#2f6177] shadow-lg ">
+              <span className="text-[#14749e]">
+                <IoMdInformationCircle />
+              </span>
+              دوره رایگان بعدی در صفحه اینستاگرام اطلاع رسانی خواهد شد.
+            </div>
+          </div>
         )}
       </div>
       {youtubeLinks ? (
