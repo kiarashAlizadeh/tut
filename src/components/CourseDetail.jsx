@@ -62,17 +62,22 @@ function CourseDetail({ id }) {
         <div className="mb-5 flex w-[95%] items-center gap-x-2 rounded-lg bg-white px-3  py-2 text-sm font-bold text-gray-500 shadow-md sm:text-lg xl:mt-0 xl:w-full">
           <Link
             to="/"
-            className="flex items-center gap-x-2 hover:text-[#14749d]"
+            className="group flex items-center gap-x-2 hover:text-[#14749d]"
           >
             <FaHome />
-            صفحه اصلی
+            <span className="border-b-2 border-transparent group-hover:border-[#14749d]">
+              صفحه اصلی
+            </span>
           </Link>
           <MdOutlineNavigateBefore />
-          <Link to="/courses" className="hover:text-[#14749d]">
+          <Link
+            to="/courses"
+            className="border-b-2 border-transparent hover:border-[#14749d] hover:text-[#14749d]"
+          >
             دوره‌ها
           </Link>
           <MdOutlineNavigateBefore />
-          <span className="cursor-default">
+          <span>
             {title} {level}
           </span>
         </div>
