@@ -8,6 +8,8 @@ import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
+import Swal from "sweetalert2"
+
 // react icons
 import { FaHome, FaDollarSign, FaCheckCircle } from "react-icons/fa"
 import {
@@ -52,10 +54,48 @@ function CourseDetail({ id }) {
   }
 
   // onclick handler
-  const submitBtnHandler = () => {
-    window.location.href = formLink
-  }
+  const submitBtnHandler = async () => {
+    const { value: accept } = await Swal.fire({
+      title: "شرایط و ضوابط",
+      html: ` 
+        <ol class="list-decimal list-inside max-h-[200px] md:max-h-[350px] flex flex-col items-start gap-y-2">
+        <li>
+            <span class="text-xl font-semibold mb-2 ml-auto">قوانین استفاده از سرویس</span>
+            <ul class="list-disc list-inside flex flex-col items-start">
+                <li>لطفاً از انتقال حساب کاربری خود به دیگران خودداری کنید.</li>
+                <li>رعایت قوانین و شرایط استفاده از پلتفرم آموزشی بسیار مهم است.</li>
+                <li>استفاده نادرست یا متخلفانه از خدمات ما ممکن است منجر به مسدود شدن حساب شما شود.</li>
+            </ul>
+        </li>
+        <li>
+            <span class="text-xl font-semibold mb-2">حفظ حریم خصوصی و اطلاعات کاربران</span>
+            <ul class="list-disc list-inside flex flex-col items-start gap-y-2">
+                <li>اطلاعات شخصی کاربران تنها برای اهداف خود مجموعه توت استفاده می‌شود و هیچگونه اطلاعاتی به شخص یا سازمان دیگری منتقل نمی‌شود.</li>
+                <li>رعایت حریم خصوصی اطلاعات شما از جمله اطلاعات مربوط به پرداخت‌ها، به‌صورت کامل تضمین می‌شود.</li>
+            </ul>
+        </li>
+    </ol>
+  `,
+      input: "checkbox",
+      inputValue: 0,
+      inputPlaceholder: `
+    اینجانب ضمن مطالعه موارد بالا، رعایت مقررات مجموعه توت را متعهد می‌شوم
+  `,
+      confirmButtonText: `
+    تایید و ورود به صفحه ثبت نام&nbsp;<i class="fa fa-arrow-right"></i>
+  `,
+      confirmButtonColor: "#14749e",
+      showCancelButton: true,
+      cancelButtonText: "انصراف",
 
+      inputValidator: (result) => {
+        return !result && "شما باید شرایط و ضوابط را تایید کنید!"
+      },
+    })
+    if (accept) {
+      window.location.href = formLink
+    }
+  }
   return (
     <>
       <div className="mx-auto flex w-fit flex-col items-center justify-between pt-5 xl:mb-10">
